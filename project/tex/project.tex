@@ -21,6 +21,7 @@
 \usepackage{hyperref}       % hyperlinks
 \usepackage{url}            % simple URL typesetting
 \usepackage{booktabs}       % professional-quality tables
+\usepackage{amsmath}
 \usepackage{amsfonts}       % blackboard math symbols
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
@@ -72,7 +73,16 @@
 
 \section{Methods}
 
+We have chosen to focus on approaches using logistic regression, k-NN and LDA/QDA to classify the lead actor's gender.
+
 \subsection{Logistic Regression}
+Logistic regression is a \textit{general linear model} (GLM), i.e. the relationship between the data $X \in \mathcal{X} \subseteq \mathbb{R}^p$ and the outcome $Y$ is on the form
+
+\begin{equation}
+	E(Y|X) = g^{-1}(X \cdot \beta)
+\end{equation}
+
+where $\beta \in \mathbb{R}^p$ and $g$ is the link function. In the case of logistic regression, $Y|X \sim Ber(p)$ and the canonical link function is the logit link $g(x) = \log \left( \frac{x}{1 - x} \right)$ with $g^{-1}(x) = \frac{\exp(x)}{1 + \exp(x)}$. Since $Y|X \sim Ber(p)$, we get $E(Y|X) = p = g^{-1}(X \cdot \beta)$. In other words, $P(Y = 1 | X = x) = g^{-1}(x \cdot \beta)$, which we can use to predict $Y$ given data $x$.
 
 \subsection{k-Nearest Neighbors}
 
