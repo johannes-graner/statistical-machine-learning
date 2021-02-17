@@ -74,6 +74,8 @@
   
 \end{abstract}
 
+\newpage
+
 \section{Introduction}
 
 \section{Methods}
@@ -84,7 +86,7 @@ In order to make the methods as comparable as possible, we have used a common se
 \subsection{Input transformations}
 In the given dataset, there are columns for the total number of words spoken as well as the number of words spoken by the lead, the co-lead etc. This could present a problem since if we compare a movie where the lead says 10 out of 100 total words and another movie where the lead says 100 out of 1000 words, most models would think that the lead speaks more in the second movie and miss the fact that the \textit{proportion} of words spoken by the lead is the same. For that reason we have transformed several input variables to express a proportion instead of absolute numbers. We also believe it might be important to have a dummy variable indicating if the lead or the co-lead is oldest. All transformations are given in Table \ref{tab:transformations}.
 
-\begin{table}[h]
+\begin{table}[h!]
 	\centering
 	\begin{tabular}{ccc}
 		Original column & New column & Transformation \\
@@ -94,6 +96,7 @@ In the given dataset, there are columns for the total number of words spoken as 
 		\makecell{Difference in words \\ lead and co-lead} & \makecell{Ratio words \\ co-lead lead} & $\frac{\text{Proportion of words co-lead}}{\text{Proportion of words lead}}$ \\
 		Number words female & \makecell{Proportion of \\ words female} & $\frac{\text{Number words female}}{\text{Total words - Number of words lead}}$ \\
 		\makecell{Number of \\ female actors} & \makecell{Proportion of \\ female actors} & $\frac{\text{Number of female actors}}{\text{Number of female actors + Number of male actos}}$ \\
+		\makecell{Number of \\ male actors} & \makecell{Number of actors} & \makecell{Number of male actors + \\ Number of female actors} \\
 		N/A & Older lead & $\begin{cases} 1, \text{Age lead > Age Co-Lead} \\ 0, \text{else} \end{cases}$
 	\end{tabular}
 	\label{tab:transformations}
@@ -102,9 +105,9 @@ In the given dataset, there are columns for the total number of words spoken as 
 
 Note that when determining 'Proportion of words female', this should only measure the words spoken by non-lead female actors so we have to subtract the lead's contribution to the total number of words.
 
-The column 'Number of male actors' was dropped since all necessary information in this column is contained in 'Proportion of female actors'.
+The column 'Number of male actors' was dropped since all necessary information in this column is contained in 'Proportion of female actors' together with 'Number of actors'.
 
-In order to improve regularization and k-NN, all numerical input variables (after transformation) where centered and scaled by their standard deviation. This results in a dataset where every numerical column contains almost all data in the interval $[-3,3]$ (in the limit, $\approx 99.7\%$ of the data should be in this interval), with higher density closer to 0.
+In order to improve regularization and k-NN, all remaining numerical input variables where centered and scaled by their standard deviation. This means that columns with proportions have values in the unit interval $[0,1]$ and the other numerical variables have values that are of roughly the same magnitude.
 
 \subsection{Logistic Regression}
 Logistic regression is a \textit{general linear model} (GLM), i.e. the relationship between the data $X \in \mathcal{X} \subseteq \mathbb{R}^p$ and the outcome $Y$ is on the form
@@ -119,7 +122,11 @@ In general, regularization is done by adding a penalizing term to the loss funct
 
 LASSO regression uses $L_1$-regularization, meaning that $R_{LASSO}(\beta) = ||\beta||_1 =  \sum_{i=1}^{p} |\beta_i|$ while Ridge regression uses $L_2$-regularization, $R_{Ridge}(\beta) = ||\beta||_2^2 = \sum_{i=1}^{p} \beta_i^2$.
 
-When attempting to classify 
+In order to find a value of $\lambda$ that performs well on the data, cross-validation is used to find the optimal value in a finite set $\Lambda = \{ \lambda_1,\dots,\lambda_k \}$. Cross-validation works by splitting the data into $n$ equally sized partitions and training the data separately on the $n$ choices of $n-1$ partitions and testing on the partition that was left out. The test error $E_{new}$ is estimated by the mean misclassification rate across the partitions. This procedure is repeated for each $\lambda_j \in \Lambda$ and the value resulting in the lowest estimated test error is chosen.
+
+Since cross-validation is used to estimate the hyper-parameter $\lambda$, this method cannot be used to estimate the test error of the whole procedure. Instead, the dataset has to be split into a training set and a testing set with a specified fraction of the total data in each set. The whole procedure above is done on the training set and the test error is estimated by evaluating the performance of the model on the testing set. However, this can yield significantly different estimates of the test error since only one split into training and testing data is considered. To get a better estimate of the actual testing error, a bootstrap procedure is performed.
+
+Since the full dataset is an iid sample from some unknown distribution, the estimated test error $\hat E_{new}$ is a random variable. By repeating the whole procedure $B$ times (i.e. $B$ independent splits into training and testing data and subsequent fitting and cross-validation), a bootstrap sample of $\hat E_{new}$ is obtained which can be used to estimate the distribution (or at least properties thereof) of $\hat E_{new}$. This is very computationally intensive but gives a much clearer view of the variability of the test error compared to just computing it for one split.
 
 \subsection{k-Nearest Neighbors}
 
@@ -128,6 +135,8 @@ When attempting to classify
 \section{Results}
 
 \subsection{Logistic Regression}
+
+
 
 \subsubsection{k-Nearest Neighbors}
 
