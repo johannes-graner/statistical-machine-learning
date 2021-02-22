@@ -2,5 +2,28 @@
 \graphicspath{{\subfix{images/}}}
 
 \begin{document}
-	It seems like $k$-NN was the worst performing of the models worth noting is the drastic effect that data transformations has on the $k$-NN model, performing at the same level as the baseline model before any transformations. Since the model is somewhat "blind" to feature importance and is greatly affected by variances in the data. Normalization of the data is thus crucial for good results.
+	It seems like $k$-NN was the worst performing of the models. Worth noting is the drastic effect that data transformations has on the $k$-NN model, performing at the same level as the baseline model before any transformations. The best results for the $k$-NN were a mean accuracy score of $0.882$ and a mean AUC Score of $0.901$ which is found in table \ref{tab:k_nn_table_20}.
+	
+	Logistic regression slightly outperformed $k$-NN. Looking at the best performing setup we see that logistic regression had a mean accuracy score of $0.898$ and a mean AUC score of $0.923$ which is seen in table \ref{tab:logreg_table_90}.  
+	
+	LDA had a mean accuracy score of $0.903$ which is only a $0.5\%$ increase from the logistic regression case, considering that both the results from logistic regression and LDA had some variance we cannot reject that LDA and logistic regression performance is similar.
+	
+	QDA however had the best performance among all the models performing at best with a mean accuracy score of $0.942$ and a mean AUC score of $0.977$(!). Almost a $4\%$ increase in accuracy compared to the second best method. One problem with the QDA model was however the outliers seen in the boxplot of \ref{tbl:boxplotQDA}. Similar outliers were found in the case of $k$-NN and logistic regression these could probably be explained by the occurrence of a "bad split" where for example many movies deviating from the average movie end up in the test portion resulting in a bad performance. However the model performed well enough overall such that QDA was chosen for production.
+	
+\begin{enumerate}
+    \item Do men or women dominate speaking roles in Hollywood?
+       
+        Based on the data it seems like males are in the lead. In $75.6\%$ of the cases the lead is male which was found by looking at the baseline model. Also the mean for "Proportion of words female" was calculated to $34,6\%$ indicating that Hollywood movies consist of almost $65\%$ male speaking.
+    \item Has gender balance in speaking roles changed over time (i.e. years)?
+        
+        Since none of the models we used seem to be effected by removing the year variable we cannot say that this is the case.
+    \item Do films in which men do more speaking make a lot more money than films in which women speak more? 
+    
+    Since none of the models seem to be effected by removing the gross variable we cannot say that gross is a good indicator for determining whether there is more male speaking than female in a given movie. That is films with more male speaking cannot be said to make more money than a film with more female speaking. 
+    
+\end{enumerate}
+	
+	
+	
+	
 \end{document}
