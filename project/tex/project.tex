@@ -24,9 +24,11 @@
 \usepackage{amsfonts}       % blackboard math symbols
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
-
+\usepackage{mathtools}
 \usepackage{amsmath}
 \usepackage{makecell}
+\usepackage{bbm}
+\usepackage{graphicx}
 
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
@@ -79,7 +81,7 @@
 \section{Introduction}
 
 \section{Methods}
-We have chosen to focus on approaches using logistic regression, k-NN and LDA/QDA to classify the lead actor's gender.
+We have chosen to focus on approaches using logistic regression, k-NN, LDA and QDA to classify the lead actor's gender.
 
 In order to make the methods as comparable as possible, we have used a common set of transformations of the input variables for all tested methods.
 
@@ -129,20 +131,148 @@ Since cross-validation is used to estimate the hyper-parameter $\lambda$, this m
 Since the full dataset is an iid sample from some unknown distribution, the estimated test error $\hat E_{new}$ is a random variable. By repeating the whole procedure $B$ times (i.e. $B$ independent splits into training and testing data and subsequent fitting and cross-validation), a bootstrap sample of $\hat E_{new}$ is obtained which can be used to estimate the distribution (or at least properties thereof) of $\hat E_{new}$. This is very computationally intensive but gives a much clearer view of the variability of the test error compared to just computing it for one split.
 
 \subsection{k-Nearest Neighbors}
+The $k$-nearest neighbors ($k$-NN) method is based on the simple principle of finding the $k$ closest neighboring points with respect to the input data $X \in \mathcal{X} \subseteq \mathbb{R}^p$. In the case of Classification the outcome $Y$ is then determined by a majority vote among the $k$ nearest data points. The method is closely related to the idea that if a test data point is close to some training data point then the prediction should be that they have the same outcome $Y$.
+
+The algorithm for k-NN can be implemented in a simple manner with a brute force algorithm measuring the distance from the test data point $\boldsymbol{x_{\star}}$ to each training data point $\boldsymbol{x_{i}}$, where $i = 1,...,n$ using some distance function $d(x,y)$. It is normal to use the Minkowski distance of order $p$ which is given by
+
+\begin{equation}
+	d(\boldsymbol{x},\boldsymbol{y}) = \left( \sum_{i=1}^{n} |x_{i} - y_{i}|^{p} \right)^{\frac{1}{p}}\textit{, where } \boldsymbol{x} = (x_1,...,x_p),\boldsymbol{y}=(y_1,...,y_p)
+	\in \mathbb{R}^p.
+\end{equation}
+
+Where $p=1$ is the Manhattan distance, and when $p=2$ we have the Euclidean distance of course any distance function could be used.
+The brute force algorithm for $k$-NN is given by 
+\par\noindent\rule{\textwidth}{0.4pt}
+\begin{enumerate}
+ \item Calculate the distance $d(\boldsymbol{x_{i}},\boldsymbol{x_{\star}})$ for each $i = 1,...,n$
+ \item Set $\mathcal{N}_{\star} = \{ \boldsymbol{x_i}: \textit{Where } \boldsymbol{x_i} \textit{ is one of the k nearest points} \}$
+ \item Return $\hat{y}(\boldsymbol{x_{\star}}) = \text{MajorityVote}\{y_j : j \in \mathcal{N}_{\star}\} $
+\end{enumerate}
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\ref{kursbok}A problem with the brute force algorithm is that all the training data has to be stored and each distance has to be calculated which can be rather computer intensive. There are however algorithms as the ball-tree and k-d tree which speeds up these calculations. The general principle is still the same, exactly how these algorithms are performed are thus left out of the report.
+
+In this case we let the Minkowski distance be our distance function and we let $p$ and $k$ be hyper-parameters which are to be tuned. This is done in an analogous manner as in the case of finding the hyper-parameter $\lambda$ in the Logistic regression case above. 
+
+Weighted $k$-NN is an alternative approach to the normal $k$-NN where the $k$ nearest neigbors also are weighted based on how far or close from the test data point they actually are effecting the majority vote such that for example closer points have "stronger" vote. In our case we tested between \textit{uniform} weights (Standard $k$-NN) and \textit{distance} weights where the weight points equals
+
+\begin{equation}
+    \dfrac{1}{d(\boldsymbol{x_{\star}, \boldsymbol{x_i}})}, 
+\end{equation}
+for each of the k-nearest neighbors, this results in giving closer neighbors a stronger influence.
+\ref{https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html}
 
 \subsection{LDA and QDA}
+For classification we construct a discriminative classifier from a generative model based on Bayes' theorem for the classes $m=1,2,..,M$
+\begin{equation}
+    p(y=m \mid \boldsymbol{x}) = \frac{ p(\boldsymbol{x} \mid y=m) p(y=m)}
+    {\sum_{i=1}^{M} p(\boldsymbol{x} \mid y=i)p(y=i)}.
+\end{equation}
+We estimate the \textit{uninformative prior probability} as $\hat{p}(y=m) = \frac{n_m}{n}$ where $n_m = \sum_{i=1}^{n} \mathbbm{1}\{y_i=m\}$ and assume that $p(\boldsymbol{x} \mid y=m)$ is a normal density with expected value $\mu_m$ and covariance matrix $\Sigma_m$. The assumption that distinguishes LDA and QDA is that for LDA we assumes that $\Sigma_1=\Sigma_2=...=\Sigma_M$ but for QDA we make no such assumption, that is, we allow for the covariance matrices to differ. A consequence is that LDA is a special case of QDA, hence QDA is a model of higher complexity. The estimates for the normal distribution parameters for each class is given by
+\begin{align}
+    \hat{\mu}_m &= \frac{1}{n_m} \sum_{i:y_i=m} \boldsymbol{x_i}, \\
+    \hat{\Sigma}_m &= \frac{1}{n_m-1}\sum_{i:y_i=m} (\boldsymbol{x}_i-\hat{\mu}_m)(\boldsymbol{x}_i-\hat{\mu}_m)^T.
+\end{align}
+The \textit{pooled covariance estimate} (weighted average of the covariance matrix estimates within each class) is given by
+\begin{equation}
+    \hat{\Sigma} = \frac{\sum_{m=1}^{M} (n_m-1)\hat{\Sigma}_m}{\sum_{m=1}^{M} (n_m-1)}=\frac{1}{n-M}\sum_{m=1}^{M}\sum_{i:y_i=m} (\boldsymbol{x}_i-\hat{\mu}_m)(\boldsymbol{x}_i-\hat{\mu}_m)^T.
+\end{equation}
+Finally we may express the discriminant analysis classifier as
+\begin{equation}
+    \hat{p}(y=m \mid \boldsymbol{x}) = \frac{n_m\mathcal{N}(\boldsymbol{x} \mid \hat{\mu}_m, \hat{\Sigma})}{\sum_{i=1}^{M} n_i\mathcal{N}(\boldsymbol{x} \mid \hat{\mu}_m, \hat{\Sigma})}
+\end{equation}
+where $\mathcal{N}(\boldsymbol{x} \mid \mu,\Sigma)=\frac{1}{(2\pi)^{M/2}\mid\Sigma\mid^{1/2}}\exp{[-\frac{1}{2}(\boldsymbol{x}-\mu_m)^T\Sigma_m^{-1}(\boldsymbol{x}-\mu_m)]}$ is the density function for the normal distribution with mean $\mu$ and covariance matrix $\Sigma$.
 
 \section{Results}
 
 \subsection{Logistic Regression}
 
-
-
 \subsubsection{k-Nearest Neighbors}
 
+When hyper-tuning the algorithm the set of $p$-values and $k$-values were given by $\{1,1.25,1.5,...,4\}$ and $\{1,2,3,...,25\}$ respectively. The number of folds used in cross-validation was again set to 10. It was found that $p = 2$ (Euclidean distance) and $k = 4$ performed best for our data set. Using these parameters the k-NN algorithm was tested and performance was measured with the mean of 100 bootstraps samples as before, the size of the sample was chosen with regards to k-NN being computationally demanding. The results are summarized in Table \ref{tab:k_nn_table_10} and Table \ref{tab:k_nn_table_20} below.
+ 
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{cccc}
+		Input & Weighted k-NN & Accuracy & AUC \\
+		\midrule
+		Before transformations & Uniform & 0.745 & 0.675 \\
+	    & Distance & 0.780 & 0.688 \\
+		\midrule
+		After transformations & Uniform & 0.864 & 0.883 \\
+		& Distance & 0.872 & 0.888 \\
+	\end{tabular}
+	\caption{Accuracy and AUC for k-NN models. 70\% training data.}
+	\label{tab:k_nn_table_10}
+\end{table}
+
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{cccc}
+        Input & Weighted k-NN & Accuracy & AUC \\
+		\midrule
+		Before transformations & Uniform & 0.750 & 0.678 \\
+	    & Distance & 0.783 & 0.693 \\
+		\midrule
+		After transformations & Uniform & 0.875 & 0.891 \\
+		& Distance & 0.882 & 0.901 \\
+	\end{tabular}
+	\caption{Accuracy and AUC for k-NN models. 90\% training data.}
+	\label{tab:k_nn_table_20}
+\end{table}
+
+It is obvious that k-NN is drastically improved by transforming the data, before transformations the model performance was even outperformed or just slightly better than the best null model. Weighted k-NN with the \textit{distance} weight seemed to perform better than the \textit{uniform} weight both before and after the transformation, the impact seems to be $0.7-0.8\%$ extra accuracy after transformation and almost $3\%$ extra accuracy before transformations. 
+
 \subsection{LDA and QDA}
+The given dataset was bootstrapped 400 times and both DA models were tested before and after input transformations.
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{cccc}
+		Input & DA Model & Mean Accuracy & Mean AUC \\
+		\midrule
+		Before transformations
+		& LDA & 0.856 & 0.870 \\
+	    & QDA & 0.818 & 0.849 \\
+		\midrule
+		After transformations
+		& LDA & 0.893 & 0.913 \\
+		& QDA & 0.933 & 0.966 \\
+	\end{tabular}
+	\caption{Mean Accuracy and Mean AUC for discriminant analysis models. 70\% training data.}
+	\label{tab:logreg_table_70}
+\end{table}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{cccc}
+		Input & DA Model & Mean Accuracy & Mean AUC \\
+		\midrule
+		Before transformations
+		& LDA & 0.866 & 0.877 \\
+	    & QDA & 0.840 & 0.869 \\
+		\midrule
+		After transformations
+		& LDA & 0.903 & 0.915 \\
+		& QDA & 0.942 & 0.977 \\
+	\end{tabular}
+	\caption{Mean Accuracy and Mean AUC for discriminant analysis models. 90\% training data.}
+	\label{tab:logreg_table_70}
+\end{table}
+From the results it is clear that QDA seems to have better performance after transformations. It is unclear which method performs better before the transformation because for QDA the variance is high. The high variance can for QDA can be explained by the fact that the original inputs are close to being colinear making $\Sigma$ close to being singular which in turn results in an inaccurate matrix inversion. For example, the standard deviation of accuracy and AUC of the QDA classifier, before transformations, on 400 bootstrapped datasets with 90\% training data were 0.076 and 0.081 respectively compared to 0.021 and 0.019 after transformations ceteris paribus.
+
+--Based on the results it seems that LDA is not complex enough of a model for this task. SKRIV OM VARFÖR QDA ÄR BÄTTRE ÄN LDA FÖR DET HÄR
+\includegraphics[scale=0.3]{project/tex/boxplotQDA.png}
+\includegraphics[scale=0.3]{project/tex/boxplotQDA90.png}
+-- några fall av väldigt dåliga resultat (70-75\%) går detta att undvika? har johannes modell lika? är det pga otur i uppdelningen av datan vid cross validation??
+-- 0.9428 accuracy cross validation 100 folds 70\% training data
+-- ENDAST EFTER TRANSFORMATION
+-- 0.9420 accuracy cross validation 100 folds 90\% training data
 
 \section{Conclusions}
+It seems like $k$-NN was the worst performing of the models worth noting is the drastic effect that data transformations has on the $k$-NN model, performing at the same level as the baseline model before any transformations. Since the model is somewhat "blind" to feature importance and is greatly affected by variances in the data. Normalization of the data is thus crucial for good results.
+
+
 
 \section{Feature Importance}
 
