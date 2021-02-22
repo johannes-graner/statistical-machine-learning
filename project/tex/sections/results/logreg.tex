@@ -1,0 +1,46 @@
+\documentclass[../../project.tex]{subfiles}
+\graphicspath{{\subfix{images/}}}
+
+\begin{document}
+	When comparing different models, it is important to have a baseline, or a null model to compare against. In this case, an obvious null model is the constant model that always predicts the same outcome regardless of input. The best null model is the one with highest accuracy, i.e. the constant model that predicts the most frequently occurring outcome. The model that always predicts a male lead has an accuracy of 0.756 and is thus chosen as the baseline.
+	
+	For all logistic regression models fitted, the set of regularization parameters, $\Lambda$, consisted of 10 logarithmically spaced values between $10^{-4}$ and $10^4$. This was the default value in the methods from scikit learn and having more densely packed values did not affect the model performance in any appreciable way. The number of folds used in cross-validation was also 10, no improvement was observed by increasing this value.
+	
+	The model performance was measured by accuracy (1 - misclassification rate) and AUC (area under ROC curve). In Tables \ref{tab:logreg_table_70} and \ref{tab:logreg_table_90}, the accuracy and AUC are estimated using the mean of 100 bootstrap samples in the case of LASSO regression and 400 in the case of Ridge regression. The reason for having different sample sizes is that computing the LASSO regression is much more computationally demanding.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{cccc}
+			Input & Regularization & Accuracy & AUC \\
+			\midrule
+			Before transformations & None & 0.870 & 0.878 \\
+			& LASSO & 0.871 & 0.880 \\
+			& Ridge & 0.871 & 0.880 \\
+			\midrule
+			After transformations & None & 0.893 & 0.920 \\
+			& LASSO & 0.895 & 0.921 \\
+			& Ridge & 0.894 & 0.921 \\
+		\end{tabular}
+		\caption{Accuracy and AUC for logistic regression models. 70\% training data.}
+		\label{tab:logreg_table_70}
+	\end{table}
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{cccc}
+			Input & Regularization & Accuracy & AUC \\
+			\midrule
+			Before transformations & None & 0.876 & 0.878 \\
+			& LASSO & 0.875 & 0.883 \\
+			& Ridge & 0.871 & 0.880 \\
+			\midrule
+			After transformations & None & 0.895 & 0.924 \\
+			& LASSO & 0.897 & 0.924 \\
+			& Ridge & 0.898 & 0.923 \\
+		\end{tabular}
+		\caption{Accuracy and AUC for logistic regression models. 90\% training data.}
+		\label{tab:logreg_table_90}
+	\end{table}
+	
+	We see that the regularization does not affect the model performance much. LASSO and Ridge regularization perform almost identically and yield at best around 0.3\% extra accuracy but considering that the different splits of the data yielded estimated test errors in a range from 0.8 to 0.98, we cannot reject that regularization does not matter in this case.
+\end{document}

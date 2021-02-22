@@ -1,0 +1,35 @@
+\documentclass[../../project.tex]{subfiles}
+\graphicspath{{\subfix{images/}}}
+
+\begin{document}
+	The $k$-nearest neighbors ($k$-NN) method is based on the simple principle of finding the $k$ closest neighboring points with respect to the input data $X \in \mathcal{X} \subseteq \mathbb{R}^p$. In the case of Classification the outcome $Y$ is then determined by a majority vote among the $k$ nearest data points. The method is closely related to the idea that if a test data point is close to some training data point then the prediction should be that they have the same outcome $Y$.
+	
+	The algorithm for k-NN can be implemented in a simple manner with a brute force algorithm measuring the distance from the test data point $\boldsymbol{x_{\star}}$ to each training data point $\boldsymbol{x_{i}}$, where $i = 1,...,n$ using some distance function $d(x,y)$. It is normal to use the Minkowski distance of order $p$ which is given by
+	
+	\begin{equation}
+	d(\boldsymbol{x},\boldsymbol{y}) = \left( \sum_{i=1}^{n} |x_{i} - y_{i}|^{p} \right)^{\frac{1}{p}}\textit{, where } \boldsymbol{x} = (x_1,...,x_p),\boldsymbol{y}=(y_1,...,y_p)
+	\in \mathbb{R}^p.
+	\end{equation}
+	
+	Where $p=1$ is the Manhattan distance, and when $p=2$ we have the Euclidean distance of course any distance function could be used.
+	The brute force algorithm for $k$-NN is given by 
+	\par\noindent\rule{\textwidth}{0.4pt}
+	\begin{enumerate}
+		\item Calculate the distance $d(\boldsymbol{x_{i}},\boldsymbol{x_{\star}})$ for each $i = 1,...,n$
+		\item Set $\mathcal{N}_{\star} = \{ \boldsymbol{x_i}: \textit{Where } \boldsymbol{x_i} \textit{ is one of the k nearest points} \}$
+		\item Return $\hat{y}(\boldsymbol{x_{\star}}) = \text{MajorityVote}\{y_j : j \in \mathcal{N}_{\star}\} $
+	\end{enumerate}
+	\par\noindent\rule{\textwidth}{0.4pt}
+	
+	\ref{kursbok}A problem with the brute force algorithm is that all the training data has to be stored and each distance has to be calculated which can be rather computer intensive. There are however algorithms as the ball-tree and k-d tree which speeds up these calculations. The general principle is still the same, exactly how these algorithms are performed are thus left out of the report.
+	
+	In this case we let the Minkowski distance be our distance function and we let $p$ and $k$ be hyper-parameters which are to be tuned. This is done in an analogous manner as in the case of finding the hyper-parameter $\lambda$ in the Logistic regression case above. 
+	
+	Weighted $k$-NN is an alternative approach to the normal $k$-NN where the $k$ nearest neigbors also are weighted based on how far or close from the test data point they actually are effecting the majority vote such that for example closer points have "stronger" vote. In our case we tested between \textit{uniform} weights (Standard $k$-NN) and \textit{distance} weights where the weight points equals
+	
+	\begin{equation}
+	\dfrac{1}{d(\boldsymbol{x_{\star}, \boldsymbol{x_i}})}, 
+	\end{equation}
+	for each of the k-nearest neighbors, this results in giving closer neighbors a stronger influence.
+	\ref{https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html}
+\end{document}

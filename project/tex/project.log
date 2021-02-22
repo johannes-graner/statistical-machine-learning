@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  22 FEB 2021 09:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  22 FEB 2021 10:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -421,39 +421,38 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 \Gin@req@height=\dimen192
 \Gin@req@width=\dimen193
 )
+(/usr/local/texlive/2020/texmf-dist/tex/latex/subfiles/subfiles.sty
+Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/import/import.sty
+Package: import 2020/04/01  v 6.2
+))
 (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-02-06 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count294
 \l__pdf_internal_box=\box53
 )
-(./project.aux
-
-LaTeX Warning: Label `tab:logreg_table_70' multiply defined.
-
-
-LaTeX Warning: Label `tab:logreg_table_70' multiply defined.
-
-)
+(./project.aux)
 \openout1 = `project.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
 
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: 
@@ -521,7 +520,7 @@ LaTeX Font Info:    ... okay on input line 71.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 71.
+Package hyperref Info: Link coloring OFF on input line 74.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -534,21 +533,21 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count295
 )
-LaTeX Info: Redefining \ref on input line 71.
-LaTeX Info: Redefining \pageref on input line 71.
-LaTeX Info: Redefining \nameref on input line 71.
+LaTeX Info: Redefining \ref on input line 74.
+LaTeX Info: Redefining \pageref on input line 74.
+LaTeX Info: Redefining \nameref on input line 74.
  (./project.out) (./project.out)
 \@outlinefile=\write3
 \openout3 = `project.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 71.
+LaTeX Info: Redefining \microtypecontext on input line 74.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 71.
+LaTeX Info: Redefining \showhyphens on input line 74.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -582,7 +581,7 @@ e
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -591,7 +590,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -601,7 +600,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 7
-4.
+7.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -610,7 +609,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 77
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 80
 .
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/t1phv.fd
@@ -623,46 +622,51 @@ Package microtype Info: Loading generic protrusion settings for font family
  [1
 
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./sections/methods/methods.tex) (./sections/methods/transformations.tex)
+(./sections/methods/logreg.tex [2]) (./sections/methods/k-nn.tex [3]
 
-
-LaTeX Warning: Reference `kursbok' on page 4 undefined on input line 153.
+LaTeX Warning: Reference `kursbok' on page 4 undefined on input line 24.
 
 
 LaTeX Warning: Reference `https://scikit-learn.org/stable/modules/generated/skl
-earn.neighbors.KNeighborsClassifier.html' on page 4 undefined on input line 163
-.
+earn.neighbors.KNeighborsClassifier.html' on page 4 undefined on input line 34.
 
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 171
-.
+
+) (./sections/methods/discanal.tex
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 10.
+
+
 (/usr/local/texlive/2020/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [4]
+)) [4]
+(./sections/results/results.tex) (./sections/results/logreg.tex)
+(./sections/results/k-nn.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5]
-<boxplotQDA.png, id=113, 603.25375pt x 358.33875pt>
+) [5] (./sections/results/discanal.tex
+<boxplotQDA.png, id=112, 603.25375pt x 358.33875pt>
 File: boxplotQDA.png Graphic file (type png)
 <use boxplotQDA.png>
-Package pdftex.def Info: boxplotQDA.png  used on input line 308.
+Package pdftex.def Info: boxplotQDA.png  used on input line 41.
 (pdftex.def)             Requested size: 180.97751pt x 107.50244pt.
-<boxplotQDA90.png, id=115, 610.28pt x 358.33875pt>
+<boxplotQDA90.png, id=114, 610.28pt x 358.33875pt>
 File: boxplotQDA90.png Graphic file (type png)
 <use boxplotQDA90.png>
-Package pdftex.def Info: boxplotQDA90.png  used on input line 309.
+Package pdftex.def Info: boxplotQDA90.png  used on input line 42.
 (pdftex.def)             Requested size: 183.0854pt x 107.50244pt.
-
-Underfull \hbox (badness 4595) in paragraph at lines 307--314
+)
+Underfull \hbox (badness 4595) in paragraph at lines 40--121
 []\T1/ptm/m/n/10 (+20) --Based on the re-sults it seems that LDA is not com-ple
 x enough of a model for
  []
 
 
-Underfull \hbox (badness 4660) in paragraph at lines 307--314
+Underfull \hbox (badness 4660) in paragraph at lines 40--121
 \T1/ptm/m/n/10 (+20) this task. SKRIV OM VAR-FÖR QDA ÄR BÄT-TRE ÄN LDA FÖR DET 
 HÄR
  []
@@ -671,20 +675,17 @@ HÄR
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `project.out' has not changed.
-(rerunfilecheck)             Checksum: 7A2C12BAEBECFA3B194573A31E96CB4E;1527.
+(rerunfilecheck)             Checksum: 7A14BE0F311461848235F088AF466E7F;1517.
  ) 
 Here is how much of TeX's memory you used:
- 12408 strings out of 479302
- 188425 string characters out of 5867251
- 535828 words of memory out of 5000000
- 29162 multiletter control sequences out of 15000+600000
+ 12521 strings out of 479302
+ 190850 string characters out of 5867251
+ 537482 words of memory out of 5000000
+ 29238 multiletter control sequences out of 15000+600000
  448611 words of font info for 176 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,17n,88p,813b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 83i,17n,88p,857b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/johannes/.texlive2020/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600p
 k>{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/tex
@@ -705,7 +706,7 @@ exmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-di
 st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on project.pdf (7 pages, 205860 bytes).
+Output written on project.pdf (7 pages, 205869 bytes).
 PDF statistics:
  201 PDF objects out of 1000 (max. 8388607)
  168 compressed objects within 2 object streams

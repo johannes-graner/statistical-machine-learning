@@ -1,0 +1,31 @@
+
+
+\documentclass[../../project.tex]{subfiles}
+\graphicspath{{\subfix{images/}}}
+
+\begin{document}
+	In the given dataset, there are columns for the total number of words spoken as well as the number of words spoken by the lead, the co-lead etc. This could present a problem since if we compare a movie where the lead says 10 out of 100 total words and another movie where the lead says 100 out of 1000 words, most models would think that the lead speaks more in the second movie and miss the fact that the \textit{proportion} of words spoken by the lead is the same. For that reason we have transformed several input variables to express a proportion instead of absolute numbers. We also believe it might be important to have a dummy variable indicating if the lead or the co-lead is oldest. All transformations are given in Table \ref{tab:transformations}.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{ccc}
+			Original column & New column & Transformation \\
+			\midrule
+			Number of words lead & \makecell{Proportion of \\ words lead} & $\frac{\text{Number of words lead}}{\text{Total words}}$ \\
+			N/A & \makecell{Proportion of \\ words co-lead} & $\frac{\text{Number of words lead - Difference in words lead and co-lead}}{\text{Total words}}$ \\
+			\makecell{Difference in words \\ lead and co-lead} & \makecell{Ratio words \\ co-lead lead} & $\frac{\text{Proportion of words co-lead}}{\text{Proportion of words lead}}$ \\
+			Number words female & \makecell{Proportion of \\ words female} & $\frac{\text{Number words female}}{\text{Total words - Number of words lead}}$ \\
+			\makecell{Number of \\ female actors} & \makecell{Proportion of \\ female actors} & $\frac{\text{Number of female actors}}{\text{Number of female actors + Number of male actos}}$ \\
+			\makecell{Number of \\ male actors} & \makecell{Number of actors} & \makecell{Number of male actors + \\ Number of female actors} \\
+			N/A & Older lead & $\begin{cases} 1, \text{Age lead > Age Co-Lead} \\ 0, \text{else} \end{cases}$
+		\end{tabular}
+		\label{tab:transformations}
+		\caption{Transformations of input variables.}
+	\end{table}
+	
+	Note that when determining 'Proportion of words female', this should only measure the words spoken by non-lead female actors so we have to subtract the lead's contribution to the total number of words.
+	
+	The column 'Number of male actors' was dropped since all necessary information in this column is contained in 'Proportion of female actors' together with 'Number of actors'.
+	
+	In order to improve regularization and k-NN, all remaining numerical input variables where centered and scaled by their standard deviation. This means that columns with proportions have values in the unit interval $[0,1]$ and the other numerical variables have values that are of roughly the same magnitude.
+\end{document}

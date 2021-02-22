@@ -1,0 +1,40 @@
+\documentclass[../../project.tex]{subfiles}
+\graphicspath{{\subfix{images/}}}
+
+\begin{document}
+	When hyper-tuning the algorithm the set of $p$-values and $k$-values were given by $\{1,1.25,1.5,...,4\}$ and $\{1,2,3,...,25\}$ respectively. The number of folds used in cross-validation was again set to 10. It was found that $p = 2$ (Euclidean distance) and $k = 4$ performed best for our data set. Using these parameters the k-NN algorithm was tested and performance was measured with the mean of 100 bootstraps samples as before, the size of the sample was chosen with regards to k-NN being computationally demanding. The results are summarized in Table \ref{tab:k_nn_table_10} and Table \ref{tab:k_nn_table_20} below.
+	
+	
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{cccc}
+			Input & Weighted k-NN & Accuracy & AUC \\
+			\midrule
+			Before transformations & Uniform & 0.745 & 0.675 \\
+			& Distance & 0.780 & 0.688 \\
+			\midrule
+			After transformations & Uniform & 0.864 & 0.883 \\
+			& Distance & 0.872 & 0.888 \\
+		\end{tabular}
+		\caption{Accuracy and AUC for k-NN models. 70\% training data.}
+		\label{tab:k_nn_table_10}
+	\end{table}
+	
+	
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{cccc}
+			Input & Weighted k-NN & Accuracy & AUC \\
+			\midrule
+			Before transformations & Uniform & 0.750 & 0.678 \\
+			& Distance & 0.783 & 0.693 \\
+			\midrule
+			After transformations & Uniform & 0.875 & 0.891 \\
+			& Distance & 0.882 & 0.901 \\
+		\end{tabular}
+		\caption{Accuracy and AUC for k-NN models. 90\% training data.}
+		\label{tab:k_nn_table_20}
+	\end{table}
+	
+	It is obvious that k-NN is drastically improved by transforming the data, before transformations the model performance was even outperformed or just slightly better than the best null model. Weighted k-NN with the \textit{distance} weight seemed to perform better than the \textit{uniform} weight both before and after the transformation, the impact seems to be $0.7-0.8\%$ extra accuracy after transformation and almost $3\%$ extra accuracy before transformations. 
+\end{document}
