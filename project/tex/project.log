@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  19 FEB 2021 14:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  22 FEB 2021 09:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -284,9 +284,28 @@ Package microtype Info: Loading configuration file microtype.cfg.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2020/12/07 v2.8 microtype main configuration file (RS)
 ))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count277
+\calc@Bcount=\count278
+\calc@Adimen=\dimen170
+\calc@Bdimen=\dimen171
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count279
+\calc@Cskip=\skip58
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
-\@mathmargin=\skip56
+\@mathmargin=\skip59
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -295,96 +314,146 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks23
-\ex@=\dimen170
+\ex@=\dimen172
 ))
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen171
+\pmbraise@=\dimen173
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count277
+\inf@bad=\count280
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count278
-\leftroot@=\count279
+\uproot@=\count281
+\leftroot@=\count282
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count280
-\DOTSCASE@=\count281
+\classnum@=\count283
+\DOTSCASE@=\count284
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
 \Mathstrutbox@=\box48
 \strutbox@=\box49
-\big@size=\dimen172
+\big@size=\dimen174
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count282
-\c@MaxMatrixCols=\count283
+\macc@depth=\count285
+\c@MaxMatrixCols=\count286
 \dotsspace@=\muskip17
-\c@parentequation=\count284
-\dspbrk@lvl=\count285
+\c@parentequation=\count287
+\dspbrk@lvl=\count288
 \tag@help=\toks24
-\row@=\count286
-\column@=\count287
-\maxfields@=\count288
+\row@=\count289
+\column@=\count290
+\maxfields@=\count291
 \andhelp@=\toks25
-\eqnshift@=\dimen173
-\alignsep@=\dimen174
-\tagshift@=\dimen175
-\tagwidth@=\dimen176
-\totwidth@=\dimen177
-\lineht@=\dimen178
+\eqnshift@=\dimen175
+\alignsep@=\dimen176
+\tagshift@=\dimen177
+\tagwidth@=\dimen178
+\totwidth@=\dimen179
+\lineht@=\dimen180
 \@envbody=\toks26
-\multlinegap=\skip57
-\multlinetaggap=\skip58
+\multlinegap=\skip60
+\multlinetaggap=\skip61
 \mathdisplay@stack=\toks27
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count292
+\l_MT_multwidth_dim=\dimen181
+\origjot=\skip62
+\l_MT_shortvdotswithinadjustabove_dim=\dimen182
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen183
+\l_MT_above_intertext_sep=\dimen184
+\l_MT_below_intertext_sep=\dimen185
+\l_MT_above_shortintertext_sep=\dimen186
+\l_MT_below_shortintertext_sep=\dimen187
+\xmathstrut@box=\box50
+\xmathstrut@dim=\dimen188
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/array.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
-\col@sep=\dimen179
-\ar@mcellbox=\box50
-\extrarowheight=\dimen180
+\col@sep=\dimen189
+\ar@mcellbox=\box51
+\extrarowheight=\dimen190
 \NC@list=\toks28
-\extratabsurround=\skip59
-\backup@length=\skip60
-\ar@cellbox=\box51
+\extratabsurround=\skip63
+\backup@length=\skip64
+\ar@cellbox=\box52
 )
-\rotheadsize=\dimen181
-\c@nlinenum=\count289
+\rotheadsize=\dimen191
+\c@nlinenum=\count293
 \TeXr@lab=\toks29
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen192
+\Gin@req@width=\dimen193
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-02-06 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count290
-\l__pdf_internal_box=\box52
+\l__color_backend_stack_int=\count294
+\l__pdf_internal_box=\box53
 )
-(./project.aux)
+(./project.aux
+
+LaTeX Warning: Label `tab:logreg_table_70' multiply defined.
+
+
+LaTeX Warning: Label `tab:logreg_table_70' multiply defined.
+
+)
 \openout1 = `project.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
 
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: 
@@ -452,7 +521,7 @@ LaTeX Font Info:    ... okay on input line 69.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 69.
+Package hyperref Info: Link coloring OFF on input line 71.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -463,23 +532,23 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count291
+\c@section@level=\count295
 )
-LaTeX Info: Redefining \ref on input line 69.
-LaTeX Info: Redefining \pageref on input line 69.
-LaTeX Info: Redefining \nameref on input line 69.
+LaTeX Info: Redefining \ref on input line 71.
+LaTeX Info: Redefining \pageref on input line 71.
+LaTeX Info: Redefining \nameref on input line 71.
  (./project.out) (./project.out)
 \@outlinefile=\write3
 \openout3 = `project.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 69.
+LaTeX Info: Redefining \microtypecontext on input line 71.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 69.
+LaTeX Info: Redefining \showhyphens on input line 71.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -487,11 +556,33 @@ Package microtype Info: No adjustment of character kerning.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
+(/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count296
+\scratchdimen=\dimen194
+\scratchbox=\box54
+\nofMPsegments=\count297
+\nofMParguments=\count298
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count299
+\MPscratchDim=\dimen195
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
+\everyMPtoPDFconversion=\toks31
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 (/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -500,7 +591,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -510,7 +601,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 7
-2.
+4.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -519,7 +610,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 75
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 77
 .
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/t1phv.fd
@@ -533,38 +624,91 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
- [4]
-(./project.aux)
+
+
+LaTeX Warning: Reference `kursbok' on page 4 undefined on input line 153.
+
+
+LaTeX Warning: Reference `https://scikit-learn.org/stable/modules/generated/skl
+earn.neighbors.KNeighborsClassifier.html' on page 4 undefined on input line 163
+.
+
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 171
+.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+) [4]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5]
+<boxplotQDA.png, id=113, 603.25375pt x 358.33875pt>
+File: boxplotQDA.png Graphic file (type png)
+<use boxplotQDA.png>
+Package pdftex.def Info: boxplotQDA.png  used on input line 308.
+(pdftex.def)             Requested size: 180.97751pt x 107.50244pt.
+<boxplotQDA90.png, id=115, 610.28pt x 358.33875pt>
+File: boxplotQDA90.png Graphic file (type png)
+<use boxplotQDA90.png>
+Package pdftex.def Info: boxplotQDA90.png  used on input line 309.
+(pdftex.def)             Requested size: 183.0854pt x 107.50244pt.
+
+Underfull \hbox (badness 4595) in paragraph at lines 307--314
+[]\T1/ptm/m/n/10 (+20) --Based on the re-sults it seems that LDA is not com-ple
+x enough of a model for
+ []
+
+
+Underfull \hbox (badness 4660) in paragraph at lines 307--314
+\T1/ptm/m/n/10 (+20) this task. SKRIV OM VAR-FÖR QDA ÄR BÄT-TRE ÄN LDA FÖR DET 
+HÄR
+ []
+
+[6] [7 <./boxplotQDA.png> <./boxplotQDA90.png>] (./project.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `project.out' has not changed.
 (rerunfilecheck)             Checksum: 7A2C12BAEBECFA3B194573A31E96CB4E;1527.
  ) 
 Here is how much of TeX's memory you used:
- 10922 strings out of 479302
- 165156 string characters out of 5867251
- 506128 words of memory out of 5000000
- 27797 multiletter control sequences out of 15000+600000
- 439768 words of font info for 135 fonts, out of 8000000 for 9000
+ 12408 strings out of 479302
+ 188425 string characters out of 5867251
+ 535828 words of memory out of 5000000
+ 29162 multiletter control sequences out of 15000+600000
+ 448611 words of font info for 176 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,17n,88p,813b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
+ 83i,17n,88p,813b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/johannes/.texlive2020/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600p
+k>{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/tex
 live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
 ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
-020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/
-type1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/
-times/utmri8a.pfb>
-Output written on project.pdf (4 pages, 142578 bytes).
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020
+/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-di
+st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
+ype1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/t
+imes/utmri8a.pfb>
+Output written on project.pdf (7 pages, 205860 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 43105 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 201 PDF objects out of 1000 (max. 8388607)
+ 168 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 48747 words of extra memory for PDF output out of 51595 (max. 10000000)
 
