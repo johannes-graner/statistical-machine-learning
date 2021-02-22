@@ -164,23 +164,23 @@ for each of the k-nearest neighbors, this results in giving closer neighbors a s
 
 \subsection{LDA and QDA}
 For classification we construct a discriminative classifier from a generative model based on Bayes' theorem for the classes $m=1,2,..,M$
-\begin{equation}
+\begin{flalign}
     p(y=m \mid \boldsymbol{x}) = \frac{ p(\boldsymbol{x} \mid y=m) p(y=m)}
     {\sum_{i=1}^{M} p(\boldsymbol{x} \mid y=i)p(y=i)}.
-\end{equation}
+\end{flalign}
 We estimate the \textit{uninformative prior probability} as $\hat{p}(y=m) = \frac{n_m}{n}$ where $n_m = \sum_{i=1}^{n} \mathbbm{1}\{y_i=m\}$ and assume that $p(\boldsymbol{x} \mid y=m)$ is a normal density with expected value $\mu_m$ and covariance matrix $\Sigma_m$. The assumption that distinguishes LDA and QDA is that for LDA we assumes that $\Sigma_1=\Sigma_2=...=\Sigma_M$ but for QDA we make no such assumption, that is, we allow for the covariance matrices to differ. A consequence is that LDA is a special case of QDA, hence QDA is a model of higher complexity. The estimates for the normal distribution parameters for each class is given by
-\begin{align}
+\begin{flalign}
     \hat{\mu}_m &= \frac{1}{n_m} \sum_{i:y_i=m} \boldsymbol{x_i}, \\
     \hat{\Sigma}_m &= \frac{1}{n_m-1}\sum_{i:y_i=m} (\boldsymbol{x}_i-\hat{\mu}_m)(\boldsymbol{x}_i-\hat{\mu}_m)^T.
-\end{align}
+\end{flalign}
 The \textit{pooled covariance estimate} (weighted average of the covariance matrix estimates within each class) is given by
-\begin{equation}
+\begin{flalign}
     \hat{\Sigma} = \frac{\sum_{m=1}^{M} (n_m-1)\hat{\Sigma}_m}{\sum_{m=1}^{M} (n_m-1)}=\frac{1}{n-M}\sum_{m=1}^{M}\sum_{i:y_i=m} (\boldsymbol{x}_i-\hat{\mu}_m)(\boldsymbol{x}_i-\hat{\mu}_m)^T.
-\end{equation}
+\end{flalign}
 Finally we may express the discriminant analysis classifier as
-\begin{equation}
+\begin{flalign}
     \hat{p}(y=m \mid \boldsymbol{x}) = \frac{n_m\mathcal{N}(\boldsymbol{x} \mid \hat{\mu}_m, \hat{\Sigma})}{\sum_{i=1}^{M} n_i\mathcal{N}(\boldsymbol{x} \mid \hat{\mu}_m, \hat{\Sigma})}
-\end{equation}
+\end{flalign}
 where $\mathcal{N}(\boldsymbol{x} \mid \mu,\Sigma)=\frac{1}{(2\pi)^{M/2}\mid\Sigma\mid^{1/2}}\exp{[-\frac{1}{2}(\boldsymbol{x}-\mu_m)^T\Sigma_m^{-1}(\boldsymbol{x}-\mu_m)]}$ is the density function for the normal distribution with mean $\mu$ and covariance matrix $\Sigma$.
 
 \section{Results}
