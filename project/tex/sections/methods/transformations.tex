@@ -26,11 +26,7 @@
 		\label{tab:transformations}
 	\end{table}
 	
-	Note that when determining 'Proportion of words female', this should only measure the words spoken by non-lead female actors so we have to subtract the lead's contribution to the total number of words.
-	
-	The column 'Number of male actors' was dropped since all necessary information in this column is contained in 'Proportion of female actors' together with 'Number of actors'.
-	
-	In order to improve regularization and k-NN, all remaining numerical input variables where centered and scaled by their standard deviation. This means that columns with proportions have values in the unit interval $[0,1]$ and the other numerical variables have values that are of roughly the same magnitude. This scaling was not done for QDA as it is not necessary for that method.
+	Note that when determining 'Proportion of words female', this should only measure the words spoken by non-lead female actors so we have to subtract the lead's contribution to the total number of words. The column 'Number of male actors' was dropped since all necessary information in this column is contained in 'Proportion of female actors' together with 'Number of actors'. In order to improve regularization and k-NN, all remaining numerical input variables where centered and scaled by their standard deviation. This means that columns with proportions have values in the unit interval $[0,1]$ and the other numerical variables have values that are of roughly the same magnitude. This scaling was not done for QDA as it is not necessary for that method.
 	
 	%% Det här har inte gjorts för QDA!
 \end{document}
