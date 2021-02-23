@@ -2,6 +2,8 @@
 *.log
 *.gz
 *.out
+*.bbl
+*.blg
 project/tex/project.log
 project/tex/project.synctex.gz
 project/tex/project.out
