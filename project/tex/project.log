@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  23 FEB 2021 10:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  23 FEB 2021 12:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -296,7 +296,11 @@ Package microtype Info: Loading configuration file microtype.cfg.
 (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/microtype/microtype.cf
 g
 File: microtype.cfg 2020/12/07 v2.8 microtype main configuration file (RS)
-))
+)) (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
 (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/mathtools/mathtools.st
 y
 Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
@@ -517,7 +521,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 83
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 84
 .
  (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -530,24 +534,24 @@ File: l3backend-pdftex.def 2021-02-06 L3 backend support: PDF output (pdfTeX)
 ) (./project.aux)
 \openout1 = `project.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
 
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: 
@@ -615,7 +619,7 @@ LaTeX Font Info:    ... okay on input line 83.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 83.
+Package hyperref Info: Link coloring OFF on input line 84.
 (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -628,21 +632,21 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count303
 )
-LaTeX Info: Redefining \ref on input line 83.
-LaTeX Info: Redefining \pageref on input line 83.
-LaTeX Info: Redefining \nameref on input line 83.
+LaTeX Info: Redefining \ref on input line 84.
+LaTeX Info: Redefining \pageref on input line 84.
+LaTeX Info: Redefining \nameref on input line 84.
  (./project.out) (./project.out)
 \@outlinefile=\write3
 \openout3 = `project.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 83.
+LaTeX Info: Redefining \microtypecontext on input line 84.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 83.
+LaTeX Info: Redefining \showhyphens on input line 84.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -679,34 +683,34 @@ e
 ))
 \c@lstlisting=\count310
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
-6.
+7.
  (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
-6.
+7.
 (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-86.
+87.
 
 (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-86.
+87.
 
 (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 86.
+(Font)              <10> on input line 87.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 86.
+(Font)              <7> on input line 87.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 86.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 86.
+(Font)              <5> on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
 
 
 (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -715,7 +719,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 86.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
 
 
 (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -725,7 +729,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
-6.
+7.
 
 (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -735,7 +739,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 8
-7.
+8.
 
 (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -751,21 +755,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 {/media/storage/ubuntu/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.ma
 p}]
-Overfull \hbox (25.29831pt too wide) in paragraph at lines 11--23
+Overfull \hbox (25.29831pt too wide) in paragraph at lines 11--22
  [][] 
  []
 
-) (./sections/methods/logreg.tex [2]) (./sections/methods/k-nn.tex
-
-LaTeX Warning: Reference `kursbok' on page 3 undefined on input line 24.
-
-[3]
-
-LaTeX Warning: Reference `https://scikit-learn.org/stable/modules/generated/skl
-earn.neighbors.KNeighborsClassifier.html' on page 4 undefined on input line 34.
-
-
-) (./sections/methods/discanal.tex
+) (./sections/methods/logreg.tex [2]) (./sections/methods/k-nn.tex [3])
+(./sections/methods/discanal.tex
 LaTeX Font Info:    Trying to load font information for U+bbm on input line 10.
 
 
@@ -812,19 +807,34 @@ Underfull \vbox (badness 1552) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10])
-[11] (./project.aux)
+(./project.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
+[]\T1/lmr/m/n/10 (+20) ``Scikit-learn, doc-u-men-ta-tion - sklearn.neighbors.kn
+eighborsclassifier.'' []$\T1/lmtt/m/n/10 https :
+ []
 
-LaTeX Warning: There were undefined references.
 
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
+\T1/lmtt/m/n/10 / / scikit-[]learn . org / stable / modules / generated / sklea
+rn . neighbors .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
+\T1/lmtt/m/n/10 KNeighborsClassifier . html # sklearn-[]neighbors-[]kneighborsc
+lassifier$[]\T1/lmr/m/n/10 (+20) .  Ac-
+ []
+
+) [11] (./project.aux)
 Package rerunfilecheck Info: File `project.out' has not changed.
 (rerunfilecheck)             Checksum: 7A14BE0F311461848235F088AF466E7F;1517.
  ) 
 Here is how much of TeX's memory you used:
- 15033 strings out of 479302
- 227121 string characters out of 5867251
- 1049561 words of memory out of 5000000
- 31544 multiletter control sequences out of 15000+600000
- 482988 words of font info for 163 fonts, out of 8000000 for 9000
+ 15134 strings out of 479302
+ 228388 string characters out of 5867251
+ 1049662 words of memory out of 5000000
+ 31631 multiletter control sequences out of 15000+600000
+ 483201 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,18n,88p,959b,2080s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/media/storage/ubuntu/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} 
@@ -854,10 +864,10 @@ pfb></media/storage/ubuntu/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10
 10.pfb></media/storage/ubuntu/texlive/2020/texmf-dist/fonts/type1/public/lm/lmt
 ti10.pfb></media/storage/ubuntu/texlive/2020/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb>
-Output written on project.pdf (11 pages, 342559 bytes).
+Output written on project.pdf (11 pages, 346411 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 340 compressed objects within 4 object streams
- 157 named destinations out of 1000 (max. 500000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 355 compressed objects within 4 object streams
+ 161 named destinations out of 1000 (max. 500000)
  42593 words of extra memory for PDF output out of 42996 (max. 10000000)
 
