@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  23 FEB 2021 09:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  23 FEB 2021 10:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -688,7 +688,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ) (./sections/conclusions.tex [6]) (./sections/feature_importance.tex) [7]
-(./project.aux)
+(./notebooks/transformations.tex) [8] (./project.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -696,10 +696,10 @@ Package rerunfilecheck Info: File `project.out' has not changed.
 (rerunfilecheck)             Checksum: 7A14BE0F311461848235F088AF466E7F;1517.
  ) 
 Here is how much of TeX's memory you used:
- 12579 strings out of 479302
- 194019 string characters out of 5867251
+ 12586 strings out of 479302
+ 194154 string characters out of 5867251
  539326 words of memory out of 5000000
- 29247 multiletter control sequences out of 15000+600000
+ 29248 multiletter control sequences out of 15000+600000
  449391 words of font info for 188 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,17n,88p,959b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -725,10 +725,10 @@ ntu/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></media/storage
 /ubuntu/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></media/storag
 e/ubuntu/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></media/stora
 ge/ubuntu/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on project.pdf (7 pages, 212679 bytes).
+Output written on project.pdf (8 pages, 213248 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 178 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 183 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 500000)
  48737 words of extra memory for PDF output out of 51595 (max. 10000000)
 
