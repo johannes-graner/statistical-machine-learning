@@ -74,14 +74,16 @@
 	\end{table}
 	From the Tables \ref{tab:discanal_table_70} and \ref{tab:discanal_table_90} we conclude that QDA seems to be more apt for this problem for the final inputs. It is unclear which method performs better for the original inputs. For QDA on the original inputs, the variance in accuracy is high which can be explained by the fact that the original inputs are close to being colinear. This in turn makes $\Sigma$ close to being singular resulting in inaccurate matrix inversion. For example, the standard deviation of accuracy and AUC of the QDA classifier, on the original inputs, with 400 bootstrapped datasets and 90\% training data were 0.076 and 0.081 respectively, compared to 0.021 and 0.019 with the final inputs, ceteris paribus. Fortunately, the final inputs are not colinear.
 	
-	Cross validation was carried out to estimate the accuracy using 20 folds resulting in an estimated accuracy of 0.949 using 70\% training data. As can be seen in Figure \ref{fig:boxplotQDA}, there is a noticeable variance in accuracy for the different training sets suggesting that there might be outliers in the data that the model has problems accounting for. Increasing the number of folds also increases the minimum accuracy that can be found in the corresponding box-plot, as to be expected. Also using cross validation to compare the effects of input transformations we see a 0.090 increase in accuracy using the final inputs compared to the original inputs. Adding the variables 'Years' and 'Gross' back into the inputs we see a small decrease in accuracy hence they are left out.
-	\begin{figure}[ht]
+		\begin{figure}[ht]
 		\centering
-    	\includegraphics[scale=0.7]{project/tex/QDAboxplot.png}
+    	\includegraphics[width=0.9\linewidth]{project/tex/QDAboxplot.png}
 		\caption{Accuracy estimation using cross validation with 20 folds.}
 		\label{fig:boxplotQDA}
     \end{figure}
-    
+	
+	Cross validation was carried out to estimate the accuracy using 20 folds resulting in an estimated accuracy of 0.949 using 70\% training data. As can be seen in Figure \ref{fig:boxplotQDA}, there is a noticeable variance in accuracy for the different training sets suggesting that there might be outliers in the data that the model has problems accounting for. Increasing the number of folds also increases the minimum accuracy that can be found in the corresponding box-plot, as to be expected. Also using cross validation to compare the effects of input transformations we see a 0.090 increase in accuracy using the final inputs compared to the original inputs. Adding the variables 'Years' and 'Gross' back into the inputs we see a small decrease in accuracy hence they are left out.
+
+    %width=0.8\linewidth
 %%   \begin{table}[h!]
 %%		\centering
 %%		\begin{tabular}{cccc}
