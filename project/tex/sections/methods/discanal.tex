@@ -11,8 +11,8 @@
 	
 	The estimates for the normal distribution parameters for each class is given by
 	\begin{align}
-	\hat{\mu}_m &= \frac{1}{n_m} \sum_{i:y_i=m} \boldsymbol{x_i}, \\
-	\hat{\Sigma}_m &= \frac{1}{n_m-1}\sum_{i:y_i=m} (\boldsymbol{x}_i-\hat{\mu}_m)(\boldsymbol{x}_i-\hat{\mu}_m)^T
+	\hat{\mu}_m &= \frac{1}{n_m} \sum_{i:y_i=m} \boldsymbol{x_i} \vspace{15mm} \text{ and }\vspace{5mm}
+	\hat{\Sigma}_m = \frac{1}{n_m-1}\sum_{i:y_i=m} (\boldsymbol{x}_i-\hat{\mu}_m)(\boldsymbol{x}_i-\hat{\mu}_m)^T
 	\end{align}
 	derived from maximum likelihood estimation and adjusting $\hat{\Sigma}_m$ to make it unbiased. The \textit{pooled covariance estimate} (weighted average of the covariance matrix estimates within each class) is given by
 	\begin{equation}
