@@ -5,4 +5,4 @@
 *.bbl
 *.blg
 *.aux
-project/tex/project.pdf
+project/tex/*.pdf
