@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  23 FEB 2021 13:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  23 FEB 2021 13:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -806,11 +806,7 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 Underfull \vbox (badness 1552) has occurred while \output is active []
 
  [9])
-(./notebooks/logreg.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10])
-(./project.bbl
+(./notebooks/logreg.tex [10]) (./notebooks/k-nn.tex [11]) (./project.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 15--18
 []\T1/lmr/m/n/10 (+20) ``Scikit-learn, doc-u-men-ta-tion - sklearn.neighbors.kn
 eighborsclassifier.'' []$\T1/lmtt/m/n/10 https :
@@ -828,15 +824,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--18
 lassifier$[]\T1/lmr/m/n/10 (+20) .  Ac-
  []
 
-) [11] (./project.aux)
+) [12] (./project.aux)
 Package rerunfilecheck Info: File `project.out' has not changed.
 (rerunfilecheck)             Checksum: 7A14BE0F311461848235F088AF466E7F;1517.
  ) 
 Here is how much of TeX's memory you used:
- 15134 strings out of 479302
- 228385 string characters out of 5867251
+ 15216 strings out of 479302
+ 229562 string characters out of 5867251
  1049661 words of memory out of 5000000
- 31631 multiletter control sequences out of 15000+600000
+ 31650 multiletter control sequences out of 15000+600000
  483201 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,18n,88p,959b,2080s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -867,10 +863,10 @@ pfb></media/storage/ubuntu/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10
 10.pfb></media/storage/ubuntu/texlive/2020/texmf-dist/fonts/type1/public/lm/lmt
 ti10.pfb></media/storage/ubuntu/texlive/2020/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb>
-Output written on project.pdf (11 pages, 346383 bytes).
+Output written on project.pdf (12 pages, 351580 bytes).
 PDF statistics:
- 393 PDF objects out of 1000 (max. 8388607)
- 355 compressed objects within 4 object streams
- 161 named destinations out of 1000 (max. 500000)
+ 472 PDF objects out of 1000 (max. 8388607)
+ 432 compressed objects within 5 object streams
+ 222 named destinations out of 1000 (max. 500000)
  42593 words of extra memory for PDF output out of 42996 (max. 10000000)
 
