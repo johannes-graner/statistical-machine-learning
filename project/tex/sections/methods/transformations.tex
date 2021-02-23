@@ -4,7 +4,7 @@
 \graphicspath{{\subfix{images/}}}
 
 \begin{document}
-	In the given dataset, there are columns for the total number of words spoken as well as the number of words spoken by the lead, the co-lead etc. This could present a problem since if we compare a movie where the lead says 10 out of 100 total words and another movie where the lead says 100 out of 1000 words, most models would think that the lead speaks more in the second movie and miss the fact that the \textit{proportion} of words spoken by the lead is the same. For that reason we have transformed several input variables to express a proportion instead of absolute numbers. We also believe it might be important to have a dummy variable indicating if the lead or the co-lead is oldest. All transformations are given in Table \ref{tab:transformations}.
+	In the given dataset, there are columns for the total number of words spoken as well as the number of words spoken by the lead, the co-lead etc. This could present a problem if we compare a movie where the lead says 10 out of 100 total words and another movie where the lead says 100 out of 1000 words. Most models would think that the lead speaks more in the second movie and miss the fact that the \textit{proportion} of words spoken by the lead is the same. Hence, we have transformed several input variables to express a proportion instead of absolute numbers. We also believe it might be important to have a dummy variable indicating if the lead or the co-lead is oldest. All transformations are given in Table \ref{tab:transformations}.
 	
 	\begin{table}[h!]
 		\centering
