@@ -6,9 +6,9 @@
 	
 	Logistic regression slightly outperformed $k$-NN. Looking at the best performing setup we see that logistic regression had a mean accuracy score of $0.898$ and a mean AUC score of $0.923$ which is seen in table \ref{tab:logreg_table_90}.  
 	
-	LDA had a mean accuracy score of $0.903$ which is only a $0.5\%$ increase from the logistic regression case, considering that both the results from logistic regression and LDA had some variance we cannot reject that LDA and logistic regression performance is similar.
+	LDA had a mean accuracy score of $0.903$ which is only a $0.005$ increase from the logistic regression case, considering that both the results from logistic regression and LDA had some variance we cannot reject that LDA and logistic regression performance is similar.
 	
-	QDA however had the best performance among all the models performing at best with a mean accuracy score of $0.942$ and a mean AUC score of $0.977$(!). Almost a $4\%$ increase in accuracy compared to the second best method. One problem with the QDA model was however the outliers seen in the boxplot of Figure \ref{fig:boxplotQDA}. Similar outliers were found in the case of $k$-NN and logistic regression these could probably be explained by the occurrence of a "bad split" where for example many movies deviating from the average movie end up in the test portion resulting in a bad performance. However the model performed well enough overall such that QDA was chosen for production.
+	QDA however had the best performance among all the models performing at best with a mean accuracy score of $0.942$ and a mean AUC score of $0.977$(!). Almost a $0.04$ increase in accuracy compared to the second best method. One problem with the QDA model was however the outliers seen in the boxplot of Figure \ref{fig:boxplotQDA}. Similar outliers were found in the case of $k$-NN and logistic regression these could probably be explained by the occurrence of a "bad split" where for example many movies deviating from the average movie end up in the test portion resulting in a bad performance. However the model performed well enough overall such that QDA was chosen for production.
 	
 \begin{enumerate}
     \item Do men or women dominate speaking roles in Hollywood?
