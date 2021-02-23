@@ -6,6 +6,7 @@
 	
 	For all logistic regression models fitted, the set of regularization parameters, $\Lambda$, consisted of 10 logarithmically spaced values between $10^{-4}$ and $10^4$. This was the default value in the methods from scikit learn and having more densely packed values did not affect the model performance in any appreciable way. The number of folds used in cross-validation was also 10, no improvement was observed by increasing this value.
 	
+	%Första meningen är överflödig nu när det förklaras tidigare
 	The model performance was measured by accuracy (1 - misclassification rate) and AUC (area under ROC curve). In Tables \ref{tab:logreg_table_70} and \ref{tab:logreg_table_90}, the accuracy and AUC are estimated using the mean of 100 bootstrap samples in the case of LASSO regression and 400 in the case of Ridge regression. The reason for having different sample sizes is that computing the LASSO regression is much more computationally demanding.
 	
 	\begin{table}[h!]
