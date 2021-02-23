@@ -2,7 +2,43 @@
 \graphicspath{{\subfix{images/}}}
 
 \begin{document}
-	\begin{verbatim}
-		content...
-	\end{verbatim}
+	\begin{lstlisting}[language=Python]
+		import numpy as np
+		import pandas as pd
+		import sklearn.preprocessing as skl_pre
+		
+		rawData = pd.read_csv('train.csv')
+		
+		cols_to_norm = [
+		'Total words',
+		'Year',
+		'Gross',
+		'Mean Age Male',
+		'Mean Age Female',
+		'Age Lead',
+		'Age Co-Lead',
+		'Number of actors'
+		]
+		
+		def pre_process(raw_data, cols_to_norm):
+		data = raw_data.copy()
+		
+		data['Lead'] = pd.get_dummies(data['Lead'])
+		data['Number of words co-lead'] = data['Number of words lead'] - data['Difference in words lead and co-lead']
+		data['Proportion of words lead'] = data['Number of words lead']/data['Total words']
+		data['Proportion of words co-lead'] = data['Number of words co-lead']/data['Total words']
+		data['Ratio words co-lead lead'] = data['Number of words co-lead']/data['Number of words lead']
+		data['Proportion of words female'] = data['Number words female']/(data['Total words'] - data['Number of words lead'])
+		data['Number of actors'] = data['Number of male actors'] + data['Number of female actors']
+		data['Proportion of female actors'] = data['Number of female actors']/data['Number of actors']
+		data['Older lead'] = data['Age Lead'] < data['Age Co-Lead']
+		data['Older lead'] = pd.get_dummies(data['Older lead'])
+		
+		scaler = skl_pre.StandardScaler()
+		data[cols_to_norm] = scaler.fit_transform(data[cols_to_norm])
+		
+		return data
+		
+		data = pre_process(rawData, cols_to_norm)
+	\end{lstlisting}
 \end{document}
