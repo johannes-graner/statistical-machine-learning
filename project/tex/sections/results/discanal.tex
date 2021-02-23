@@ -72,11 +72,11 @@
 		\end{tabular}
 		\label{tab:discanal_table_90}
 	\end{table}
-	From the Tables \ref{tab:discanal_table_70} and \ref{tab:discanal_table_90} we conclude that QDA seems to be more apt for this problem for the final inputs. It is unclear which method performs better for the original inputs. For QDA on the original inputs, the variance in accuracy is high which can be explained by the fact that the original inputs are close to being colinear. This in turn makes $\Sigma$ close to being singular resulting in inaccurate matrix inversion. For example, the standard deviation of accuracy and AUC of the QDA classifier, on the original inputs, with 400 bootstrapped datasets and 90\% training data were 0.076 and 0.081 respectively, compared to 0.021 and 0.019 with the final inputs, ceteris paribus. Fortunately, the final inputs are not colinear.
+	From the Tables \ref{tab:discanal_table_70} and \ref{tab:discanal_table_90} we conclude that QDA seems to be more apt for this problem for the final inputs. It is unclear which method performs better for the original inputs. For QDA on the original inputs, the variance in accuracy is high which can be explained by the fact that the original inputs are close to being colinear resulting in inaccurate matrix inversion of $\Sigma$. For example, the standard deviation of accuracy and AUC of the QDA classifier, on the original inputs, with 400 bootstrapped datasets and 90\% training data were 0.076 and 0.081 respectively, compared to 0.021 and 0.019 with the final inputs, ceteris paribus. Fortunately, the final inputs are not colinear.
 	
-		\begin{figure}[ht]
+	\begin{figure}[ht]
 		\centering
-    	\includegraphics[width=0.9\linewidth]{project/tex/QDAboxplot.png}
+    	\includegraphics[width=1\linewidth]{project/tex/QDAboxplot.png}
 		\caption{Accuracy estimation using cross validation with 20 folds.}
 		\label{fig:boxplotQDA}
     \end{figure}
