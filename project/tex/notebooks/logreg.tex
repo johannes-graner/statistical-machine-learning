@@ -2,7 +2,66 @@
 \graphicspath{{\subfix{images/}}}
 
 \begin{document}
-	\begin{verbatim}
-		content...
-	\end{verbatim}
+	\begin{lstlisting}[language=Python]
+trainRatio = config['Train Ratio'][0]
+seed = config['Random Seed'][0]
+train, test = skl_ms.train_test_split(data, train_size=trainRatio)
+
+featureSet1 = [
+	'Year',
+	'Gross',
+	'Number of actors',
+	'Proportion of female actors',
+	'Mean Age Male',
+	'Mean Age Female',
+	'Age Lead',
+	'Age Co-Lead',
+	'Total words',
+	'Proportion of words lead',
+	'Proportion of words co-lead',
+	'Ratio words co-lead lead',
+	'Proportion of words female',
+	'Older lead'
+]
+
+features = featureSet1.copy()
+#features.remove('Proportion of words female')
+#features.remove('Year')
+#features.remove('Gross')
+#features = ['Proportion of words lead']
+target = 'Lead'
+
+# No regularization
+
+B = 100
+accuracies = []
+aucs = []
+for i in range(B):
+	train, test = skl_ms.train_test_split(data, train_size=trainRatio)
+	logReg = fit_and_test(skl_lm.LogisticRegression(penalty='none', solver='newton-cg'), train, test, features, target, suppress_output=True)
+	accuracies.append(logReg.score(test[features], test[target]))
+	aucs.append(skl_met.roc_auc_score(test[target], logReg.predict_proba(test[features])[:,1]))
+	
+# LASSO
+
+B = 100
+accuracies = []
+aucs = []
+for i in range(B):
+	train, test = skl_ms.train_test_split(data, train_size=trainRatio)
+	logRegLasso = fit_and_test(skl_lm.LogisticRegressionCV(Cs=10, cv=10, penalty='l1', solver='liblinear', n_jobs=10), train, test, features, target, suppress_output=True)
+	accuracies.append(logRegLasso.score(test[features], test[target]))
+	aucs.append(skl_met.roc_auc_score(test[target], logRegLasso.predict_proba(test[features])[:,1]))
+	
+# Ridge
+
+B = 400
+accuracies = []
+aucs = []
+for i in range(B):
+	train, test = skl_ms.train_test_split(data, train_size=trainRatio)
+	logRegLasso = fit_and_test(skl_lm.LogisticRegressionCV(Cs=10, cv=10, penalty='l2', solver='liblinear', n_jobs=10), train, test, features, target, suppress_output=True)
+	accuracies.append(logRegLasso.score(test[features], test[target]))
+	aucs.append(skl_met.roc_auc_score(test[target], logRegLasso.predict_proba(test[features])[:,1]))
+	\end{lstlisting}
 \end{document}

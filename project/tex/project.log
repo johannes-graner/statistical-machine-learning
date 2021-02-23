@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  23 FEB 2021 10:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  23 FEB 2021 10:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -804,7 +804,15 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 6.
-) [9] (./project.aux)
+
+Underfull \vbox (badness 1552) has occurred while \output is active []
+
+ [9])
+(./notebooks/logreg.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10])
+[11] (./project.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -812,13 +820,13 @@ Package rerunfilecheck Info: File `project.out' has not changed.
 (rerunfilecheck)             Checksum: 7A14BE0F311461848235F088AF466E7F;1517.
  ) 
 Here is how much of TeX's memory you used:
- 14912 strings out of 479302
- 225383 string characters out of 5867251
- 984489 words of memory out of 5000000
- 31500 multiletter control sequences out of 15000+600000
- 482669 words of font info for 162 fonts, out of 8000000 for 9000
+ 15033 strings out of 479302
+ 227121 string characters out of 5867251
+ 1049561 words of memory out of 5000000
+ 31544 multiletter control sequences out of 15000+600000
+ 482988 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,18n,88p,959b,1386s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 83i,18n,88p,959b,2080s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/media/storage/ubuntu/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} 
 </home/johannes/.texlive2020/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk>{
 /media/storage/ubuntu/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}
@@ -843,12 +851,13 @@ pfb></media/storage/ubuntu/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10
 .pfb></media/storage/ubuntu/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy7
 .pfb></media/storage/ubuntu/texlive/2020/texmf-dist/fonts/type1/public/lm/lmtk1
 0.pfb></media/storage/ubuntu/texlive/2020/texmf-dist/fonts/type1/public/lm/lmtt
-10.pfb></media/storage/ubuntu/texlive/2020/texmf-dist/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb>
-Output written on project.pdf (9 pages, 319347 bytes).
+10.pfb></media/storage/ubuntu/texlive/2020/texmf-dist/fonts/type1/public/lm/lmt
+ti10.pfb></media/storage/ubuntu/texlive/2020/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb>
+Output written on project.pdf (11 pages, 342559 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
- 83 named destinations out of 1000 (max. 500000)
- 42081 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 378 PDF objects out of 1000 (max. 8388607)
+ 340 compressed objects within 4 object streams
+ 157 named destinations out of 1000 (max. 500000)
+ 42593 words of extra memory for PDF output out of 42996 (max. 10000000)
 
