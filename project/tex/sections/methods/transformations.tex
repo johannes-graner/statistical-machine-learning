@@ -27,7 +27,7 @@
 	
 	The column 'Number of male actors' was dropped since all necessary information in this column is contained in 'Proportion of female actors' together with 'Number of actors'.
 	
-	In order to improve regularization and k-NN, all remaining numerical input variables where centered and scaled by their standard deviation. This means that columns with proportions have values in the unit interval $[0,1]$ and the other numerical variables have values that are of roughly the same magnitude.
+	In order to improve regularization and k-NN, all remaining numerical input variables where centered and scaled by their standard deviation. This means that columns with proportions have values in the unit interval $[0,1]$ and the other numerical variables have values that are of roughly the same magnitude. This scaling was not done for QDA as it is not necessary for that method.
 	
 	%% Det här har inte gjorts för QDA!
 \end{document}
