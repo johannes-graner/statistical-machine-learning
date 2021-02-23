@@ -50,6 +50,40 @@ def fit_and_test(classifier, train, test, features, target, suppress_output = Fa
 		print(skl_met.classification_report(test[target], classifier.predict(test[features])))
 	return classifier
 	
+rawFeatures = [
+    'Year',
+    'Number words female',
+    'Total words',
+    'Number of words lead',
+    'Difference in words lead and co-lead',
+    'Number of male actors',
+    'Number of female actors',
+    'Number words male',
+    'Gross',
+    'Mean Age Male',
+    'Mean Age Female',
+    'Age Lead',
+    'Age Co-Lead'
+]
+	
+featureSet1 = [
+	'Year',
+	'Gross',
+	'Number of actors',
+	'Proportion of female actors',
+	'Mean Age Male',
+	'Mean Age Female',
+	'Age Lead',
+	'Age Co-Lead',
+	'Total words',
+	'Proportion of words lead',
+	'Proportion of words co-lead',
+	'Ratio words co-lead lead',
+	'Proportion of words female',
+	'Older lead'
+]	
+	
+	
 print('Null accuracy: ' + str(max([np.mean(data[target]), 1 - np.mean(data[target])])))
 	\end{lstlisting}
 \end{document}
