@@ -10,10 +10,7 @@
     
     \item \textbf{Has gender balance in speaking roles changed over time (i.e. years)?} None of the models considered suffered performance loss from removing the input variable 'Year'. However, the correlation in the given data set between 'Year' and all of 'Numbers of words female', 'Number of female actors' and 'Mean Age female' is positive and not trivially small (0.032, 0.134 and 0.170 respectively). We conclude that this indicates a slight change in the gender balance over time but that the model does not necessarily use this relationship to make predictions.
    
-    \item \textbf{Do films in which men do more speaking make a lot more money than films in which women speak more?} None of the models considered suffered performance loss from removing the input variable 'Gross' and the QDA model even improved a bit indicating that 'Gross' may be a bad input variable for this data because ...
-    % gross för män och kvinnor har ändrats olika över åren?
-    
-    Since none of the models seem to be effected by removing the gross variable we cannot say that gross is a good indicator for determining whether there is more male speaking than female in a given movie. That is films with more male speaking cannot be said to make more money than a film with more female speaking.    
+    \item \textbf{Do films in which men do more speaking make a lot more money than films in which women speak more?} None of the models considered suffered performance loss from removing the input variable 'Gross' and the QDA model even improved a bit indicating that 'Gross' may be a bad input variable for this model. This might be because over the years, the change in 'Gross' for men and women may have changed at different rates and because of inflation; this makes 'Gross' a potentially bad input variable for future predictions.
 \end{enumerate}
 	
 All of the models fitted in this project focus on prediction instead of inference, hence it is not possible to use them to answer the above questions directly.

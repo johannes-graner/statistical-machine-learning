@@ -3,8 +3,6 @@
 
 \begin{document}
 	When hyper-tuning $k$-NN the set of $p$-values and $k$-values were given by $\{1,1.25,1.5,...,4\}$ and $\{1,2,3,...,25\}$ respectively. The number of folds used in cross-validation was again set to 10. We found that $p = 2$ (Euclidean distance) and $k = 4$ performed best for our transformed data set. Using these parameters the $k$-NN algorithm was tested and performance was measured with the mean of 100 bootstraps samples, the size of the sample was chosen with regards to k-NN being computationally demanding. The results are summarized in tables \ref{tab:k_nn_table_10} and \ref{tab:k_nn_table_20}.
-	
-	
 	\begin{table}[!h]
 		\centering
 		\caption{Accuracy and AUC using k-NN with 70\% training data.}

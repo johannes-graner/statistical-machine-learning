@@ -1,0 +1,122 @@
+\documentclass[../../project.tex]{subfiles}
+\graphicspath{{\subfix{images/}}}
+
+\begin{document}
+	\begin{lstlisting}[language=Python]
+
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import sklearn.preprocessing as skl_pre
+import sklearn.linear_model as skl_lm
+import sklearn.discriminant_analysis as skl_da
+from IPython.core.pylabtools import figsize
+import sklearn.model_selection as skl_ms
+import sklearn.metrics as skl_met
+import itertools
+import math
+
+url = 'train.csv'
+dataset = pd.read_csv(url, na_values='?', dtype={'ID': str}).dropna().reset_index()
+dataset
+    
+## Accuracy estimation using cross validation
+##
+#X = dataset[dataset.columns[1:14]]
+X = pre_process(dataset).drop(columns=['Lead'])
+X=X[{
+    'Year',
+    'Gross',
+    'Number of actors',
+    'Proportion of female actors',
+    'Mean Age Male',
+    'Mean Age Female',
+    'Age Lead',
+    'Age Co-Lead',
+    'Total words',
+    'Proportion of words lead',
+    'Proportion of words co-lead',
+    'Proportion of words female',
+    'Older lead'}]
+
+Y = dataset['Lead']
+# Split randomized data into training and validation (30% validation)
+X_train, X_val, Y_train, Y_val = skl_ms.train_test_split(X,Y, test_size=0.1)
+# List of models
+models = []
+#models.append(skl_lm.LogisticRegression(solver='liblinear'))
+#models.append(skl_da.LinearDiscriminantAnalysis())
+models.append(skl_da.QuadraticDiscriminantAnalysis())
+
+n_fold=20
+accuracy = np.zeros((n_fold, len(models)))
+model_accuracy = np.zeros(len(models))
+cv = skl_ms.KFold(n_splits=n_fold, shuffle=True)
+
+for i, (train_index, val_index) in enumerate(cv.split(X)):
+    X_train, X_val = X.iloc[train_index], X.iloc[val_index]
+    Y_train, Y_val = Y.iloc[train_index], Y.iloc[val_index]
+    
+    for m in range(np.shape(models)[0]):
+        model = models[m]
+        model.fit(X_train, Y_train)
+        prediction = model.predict(X_val)
+        accuracy[i,m] = np.mean(prediction == Y_val)
+        model_accuracy[m] += accuracy[i,m]
+for m in range(np.shape(models)[0]):
+    print('Model accuracy for model ' + str(models[m]) + ' is ')
+    print(model_accuracy[m]/n_fold)     
+
+plot = plt.figure(figsize=(20,5))
+ax = plot.add_subplot(111)
+bp = ax.boxplot(accuracy, vert=False)
+plot.show()
+
+## Bootstrapping
+##
+classifier = skl_da.LinearDiscriminantAnalysis()
+features = [
+    'Number of actors',
+    'Proportion of female actors',
+    'Mean Age Male',
+    'Mean Age Female',
+    'Age Lead',
+    'Age Co-Lead',
+    'Total words',
+    'Proportion of words lead',
+    'Proportion of words co-lead',
+    'Proportion of words female',
+    'Older lead',
+]
+target = 'Lead'
+X = pre_process(dataset)
+X=X[{
+    'Number of actors',
+    'Proportion of female actors',
+    'Mean Age Male',
+    'Mean Age Female',
+    'Age Lead',
+    'Age Co-Lead',
+    'Total words',
+    'Proportion of words lead',
+    'Proportion of words co-lead',
+    'Proportion of words female',
+    'Older lead', 'Lead'}]
+B = 400 # number of training sets to sample
+accuracies = []
+aucs = []
+for i in range(B):
+    train, test = skl_ms.train_test_split(X, test_size=0.3)
+    QDA = fit_and_test(classifier, train, test, features, target, suppress_output=True)
+    accuracies.append(QDA.score(test[features], test[target]))
+    aucs.append(skl_met.roc_auc_score(test[target], QDA.predict_proba(test[features])[:,1]))
+
+print('mean accuracy: ' + str(np.mean(accuracies)))
+print('     mean auc: ' + str(np.mean(aucs)))
+
+print('     std auc: ' + str(np.std(accuracies)))
+print('     std auc: ' + str(np.std(aucs)))
+	
+		\end{lstlisting}
+\end{document}
