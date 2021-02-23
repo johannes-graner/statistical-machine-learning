@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  22 FEB 2021 16:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  23 FEB 2021 08:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -639,15 +639,15 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 (./sections/introduction.tex) (./sections/methods/methods.tex)
-(./sections/methods/transformations.tex [1
+(./sections/methods/transformations.tex
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [1
 
 
 {/media/storage/ubuntu/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.ma
-p}]) (./sections/methods/logreg.tex)
-(./sections/methods/k-nn.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
+p}] (./sections/methods/logreg.tex [2]) (./sections/methods/k-nn.tex
 
 LaTeX Warning: Reference `kursbok' on page 3 undefined on input line 24.
 
@@ -656,60 +656,56 @@ LaTeX Warning: Reference `https://scikit-learn.org/stable/modules/generated/skl
 earn.neighbors.KNeighborsClassifier.html' on page 3 undefined on input line 34.
 
 
-) (./sections/methods/discanal.tex
+) [3] (./sections/methods/discanal.tex
 LaTeX Font Info:    Trying to load font information for U+bbm on input line 10.
 
 
 (/media/storage/ubuntu/texlive/2020/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-)
-[3]) (./sections/results/results.tex) (./sections/results/logreg.tex
+))
+(./sections/results/results.tex) (./sections/results/logreg.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [4] (./sections/results/k-nn.tex) (./sections/results/discanal.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5]
-<boxplotQDA.png, id=113, 603.25375pt x 358.33875pt>
-File: boxplotQDA.png Graphic file (type png)
-<use boxplotQDA.png>
-Package pdftex.def Info: boxplotQDA.png  used on input line 41.
-(pdftex.def)             Requested size: 180.97751pt x 107.50244pt.
-<boxplotQDA90.png, id=115, 610.28pt x 358.33875pt>
-File: boxplotQDA90.png Graphic file (type png)
-<use boxplotQDA90.png>
-Package pdftex.def Info: boxplotQDA90.png  used on input line 42.
-(pdftex.def)             Requested size: 183.0854pt x 107.50244pt.
-)
-Underfull \hbox (badness 4595) in paragraph at lines 40--117
-[]\T1/ptm/m/n/10 (+20) --Based on the re-sults it seems that LDA is not com-ple
-x enough of a model for
- []
+) [4] (./sections/results/k-nn.tex) [5] (./sections/results/discanal.tex
+
+LaTeX Warning: File `project/tex/QDAboxplot.png' not found on input line 76.
 
 
-Underfull \hbox (badness 4660) in paragraph at lines 40--117
-\T1/ptm/m/n/10 (+20) this task. SKRIV OM VAR-FÖR QDA ÄR BÄT-TRE ÄN LDA FÖR DET 
-HÄR
- []
+! Package pdftex.def Error: File `project/tex/QDAboxplot.png' not found: using 
+draft setting.
 
-(./sections/conclusions.tex) (./sections/feature_importance.tex) [6 <./boxplotQ
-DA.png> <./boxplotQDA90.png>] [7] (./project.aux)
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 ...ics[scale=0.7]{project/tex/QDAboxplot.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (./sections/conclusions.tex [6]) (./sections/feature_importance.tex) [7]
+(./project.aux)
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `project.out' has not changed.
 (rerunfilecheck)             Checksum: 7A14BE0F311461848235F088AF466E7F;1517.
  ) 
 Here is how much of TeX's memory you used:
- 12540 strings out of 479302
- 193487 string characters out of 5867251
- 537217 words of memory out of 5000000
- 29241 multiletter control sequences out of 15000+600000
- 448741 words of font info for 178 fonts, out of 8000000 for 9000
+ 12579 strings out of 479302
+ 194019 string characters out of 5867251
+ 539326 words of memory out of 5000000
+ 29247 multiletter control sequences out of 15000+600000
+ 449391 words of font info for 188 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,17n,88p,963b,427s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 83i,17n,88p,959b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/johannes/.texlive2020/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600p
 k>{/media/storage/ubuntu/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}{/
 media/storage/ubuntu/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-
@@ -732,10 +728,10 @@ ntu/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></media/storage
 /ubuntu/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></media/storag
 e/ubuntu/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></media/stora
 ge/ubuntu/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on project.pdf (7 pages, 207719 bytes).
+Output written on project.pdf (7 pages, 212653 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 48747 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 207 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 48737 words of extra memory for PDF output out of 51595 (max. 10000000)
 
