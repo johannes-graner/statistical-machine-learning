@@ -9,7 +9,9 @@
 	
 	\begin{table}[h!]
 		\centering
+		\caption{Accuracy and AUC for logistic regression models. 70\% training data.}
 		\begin{tabular}{cccc}
+		    \toprule
 			Input & Regularization & Accuracy & AUC \\
 			\midrule
 			Before transformations & None & 0.870 & 0.878 \\
@@ -19,14 +21,16 @@
 			After transformations & None & 0.893 & 0.920 \\
 			& LASSO & 0.895 & 0.921 \\
 			& Ridge & 0.894 & 0.921 \\
+			\bottomrule
 		\end{tabular}
-		\caption{Accuracy and AUC for logistic regression models. 70\% training data.}
 		\label{tab:logreg_table_70}
 	\end{table}
 	
 	\begin{table}[h!]
 		\centering
+		\caption{Accuracy and AUC for logistic regression models. 90\% training data.}
 		\begin{tabular}{cccc}
+		    \toprule
 			Input & Regularization & Accuracy & AUC \\
 			\midrule
 			Before transformations & None & 0.876 & 0.878 \\
@@ -36,8 +40,8 @@
 			After transformations & None & 0.895 & 0.924 \\
 			& LASSO & 0.897 & 0.924 \\
 			& Ridge & 0.898 & 0.923 \\
+			\bottomrule
 		\end{tabular}
-		\caption{Accuracy and AUC for logistic regression models. 90\% training data.}
 		\label{tab:logreg_table_90}
 	\end{table}
 	

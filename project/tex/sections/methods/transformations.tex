@@ -8,7 +8,9 @@
 	
 	\begin{table}[h!]
 		\centering
+		\caption{Transformations of input variables.}
 		\begin{tabular}{ccc}
+		\toprule
 			Original column & New column & Transformation \\
 			\midrule
 			Number of words lead & \makecell{Proportion of \\ words lead} & $\frac{\text{Number of words lead}}{\text{Total words}}$ \\
@@ -17,9 +19,10 @@
 			Number words female & \makecell{Proportion of \\ words female} & $\frac{\text{Number words female}}{\text{Total words - Number of words lead}}$ \\
 			\makecell{Number of \\ female actors} & \makecell{Proportion of \\ female actors} & $\frac{\text{Number of female actors}}{\text{Number of female actors + Number of male actos}}$ \\
 			\makecell{Number of \\ male actors} & \makecell{Number of actors} & \makecell{Number of male actors + \\ Number of female actors} \\
-			N/A & Older lead & $\begin{cases} 1, \text{Age lead > Age Co-Lead} \\ 0, \text{else} \end{cases}$
+			N/A & Older lead & $\begin{cases} 1, \text{Age lead > Age Co-Lead} \\ 0, \text{else} \end{cases}$ \\
+			\bottomrule
 		\end{tabular}
-		\caption{Transformations of input variables.}
+		
 		\label{tab:transformations}
 	\end{table}
 	
