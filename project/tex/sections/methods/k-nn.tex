@@ -20,7 +20,9 @@
 	
 	
 	%%A problem with the brute force algorithm is that all the training data has to be stored and each distance has to be calculated which can be rather computer intensive. 
-	A problem with the brute force algorithm is that for each point we need to calculate the distance to every other point, which is computationally demanding for larger datasets. There are however algorithms based on the same principle as brute force search such as the ball-tree and k-d tree that are less computationally demanding which were used but since they are mostly improvements for calculation speed we do not explain these here. All three of these algorithms were tested and no significant difference in the results where noted thus the choice of algorithm was set to "auto" which chooses the best suited algorithm for a given problem, further described in the Scikit-learn documentation. \cite{sklearn} 
+	A problem with the brute force algorithm is that for each point we need to calculate the distance to every other point, which is computationally demanding for larger datasets.
+	
+	There are however more computationally  efficient algorithms to find the k-NN compared to the brute force search such as ball-tree and k-d tree which are not explained in detail here. All three of these algorithms were tested and no significant difference in the results where noted thus the choice of algorithm was set to "auto" which chooses the best suited algorithm for a given problem, further described in the Scikit-learn documentation. \cite{sklearn} 
 	
 	For our problem we consider the Minkowski distance and let $p$ and $k$ be hyper-parameters which are to be tuned. This is done in an analogous manner to the case of finding the hyper-parameter $\lambda$ in the regularization problem with logistic regression previously considered.
 	
