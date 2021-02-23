@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  23 FEB 2021 08:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.15)  23 FEB 2021 09:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -692,9 +692,6 @@ If that doesn't work, type  X <return>  to quit.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `project.out' has not changed.
 (rerunfilecheck)             Checksum: 7A14BE0F311461848235F088AF466E7F;1517.
  ) 
@@ -728,7 +725,7 @@ ntu/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></media/storage
 /ubuntu/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></media/storag
 e/ubuntu/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></media/stora
 ge/ubuntu/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on project.pdf (7 pages, 212653 bytes).
+Output written on project.pdf (7 pages, 212679 bytes).
 PDF statistics:
  207 PDF objects out of 1000 (max. 8388607)
  178 compressed objects within 2 object streams

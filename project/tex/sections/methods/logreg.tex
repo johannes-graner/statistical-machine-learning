@@ -4,9 +4,9 @@
 \begin{document}
 	Logistic regression is a \textit{general linear model} (GLM), i.e. the relationship between the data $X \in \mathcal{X} \subseteq \mathbb{R}^p$ and the outcome $Y$ is on the form
 	\begin{equation}
-	E(Y|X) = g^{-1}(X \cdot \beta)
+	E(Y|X=x) = g^{-1}(x \cdot \beta)
 	\end{equation}
-	where $\beta \in \mathbb{R}^p$ and $g$ is the link function. In the case of logistic regression, $Y|X \sim Ber(p)$ and the canonical link function is the logit link $g(x) = \log \left( \frac{x}{1 - x} \right)$ with $g^{-1}(x) = \frac{\exp(x)}{1 + \exp(x)}$. Since $Y|X \sim Ber(p)$, we get $E(Y|X) = p = g^{-1}(X \cdot \beta)$. In other words, $P(Y = 1 | X = x) = g^{-1}(x \cdot \beta)$, which we can use to predict $Y$ given data $x$.
+	where $\beta \in \mathbb{R}^p$ and $g$ is the link function. In the case of logistic regression, $Y|(X = x) \sim Ber(p(x))$ and the canonical link function is the logit link $g(x) = \log \left( \frac{x}{1 - x} \right)$ with $g^{-1}(x) = \frac{\exp(x)}{1 + \exp(x)}$. Since $Y|(X=x) \sim Ber(p(x))$, we get $E(Y|X=x) = p(x) = g^{-1}(x \cdot \beta)$. In other words, $P(Y = 1 | X = x) = g^{-1}(x \cdot \beta)$, which we can use to predict $Y$ given data $x$.
 	
 	To do the regression, we find $\hat \beta \in \argmin_\beta \sum_{i=1}^{n} (y_i - \hat y(x_i; \beta))^2$ where $\hat y(x;\beta) = g^{-1} (x \cdot \beta)$. This minimizes the mean squared error (MSE) loss function. A potential problem with this approach is that there are no restrictions on the components of $\beta$ and that can lead to overfitting, especially if $n$ is not much larger than $p$. To address that issue, one can introduce regularization.
 	
