@@ -2,29 +2,15 @@
 \graphicspath{{\subfix{images/}}}
 
 \begin{document}
-	Based on the results we draw the conclusion that $k$-NN is the worst performing model of the ones considered. Neverthesless, it is worth noting the drastic effect that data transformations has on the $k$-NN model. Before transformations the model performed at the level of the baseline model, after the transformations we saw a accuracy of $0.882$ and a AUC of $0.901$ which is found in Table \ref{tab:k_nn_table_20}.
-	
-	The logistic regression model slightly outperformed $k$-NN. Looking at the best performing setup we see that logistic regression had an accuracy of $0.898$ and AUC $0.923$ which is seen in Table \ref{tab:logreg_table_90}. 
-	
-	The LDA model had an accuracy of $0.903$ which is only a $0.005$ increase from the logistic regression model. Taking variance into account, we draw the conclusion that we can not say with any confidence which model performs better.
-	
-	The QDA model performs best among all considered models by a margin with an accuracy of $0.945$ and $0.984$ AUC according to the bootstrap test and accuracy $0.949$ according to the cross validation.
+	Based on the results we draw the conclusion that $k$-NN is the worst performing model of the ones considered. Neverthesless, it is worth noting the drastic effect that data transformations has on the $k$-NN model. Before transformations the model performed at the level of the baseline model, after the transformations we saw a accuracy of $0.882$ and a AUC of $0.901$ which is found in Table \ref{tab:k_nn_table_20}. The logistic regression model slightly outperformed $k$-NN. Looking at the best performing setup we see that logistic regression had an accuracy of $0.898$ and AUC $0.923$ which is seen in Table \ref{tab:logreg_table_90}. The LDA model had an accuracy of $0.903$ which is only a $0.005$ increase from the logistic regression model. Taking variance into account, we draw the conclusion that we can not say with any confidence which model performs better. The QDA model performs best among all considered models by a margin with an accuracy of $0.945$ and $0.984$ AUC according to the bootstrap test and accuracy $0.949$ according to the cross validation.
 	
 	We answer the following questions assuming that the given data set is representative of Hollywood movies in general.
 \begin{enumerate}
-    \item \textbf{Do men or women dominate speaking roles in Hollywood?}
+    \item \textbf{Do men or women dominate speaking roles in Hollywood?} In the given data we see that in $75.6\%$ of movies there is a male in the lead. Further, the mean of 'Proportion of words female' is $34,6\%$ indicating that Hollywood movies consist of almost $65\%$ male speaking.
     
-       In the given data we see that in $75.6\%$ of movies there is a male in the lead. Further, the mean of 'Proportion of words female' is $34,6\%$ indicating that Hollywood movies consist of almost $65\%$ male speaking.
-        %%Based on the data it seems like males are in the lead. In $75.6\%$ of the cases the lead is male which was found by looking at the baseline model. Also the mean for "Proportion of words female" was calculated to $34,6\%$ indicating that Hollywood movies consist of almost $65\%$ male speaking.
-    
-    \item \textbf{Has gender balance in speaking roles changed over time (i.e. years)?}
-        None of the models considered suffered performance loss from removing the input variable 'Year'. However, the correlation in the given data set between 'Year' and all of 'Numbers of words female', 'Number of female actors' and 'Mean Age female' is positive and not trivially small (0.032, 0.134 and 0.170 respectively). We conclude that this indicates a slight change in the gender balance over time but that the model does not necessarily use this 'fact' to make predictions.
-        
-        %%Since none of the models we used seem to be effected by removing the year variable we cannot say that this is the case. However looking at the correlation in the data we see that there is a positive correlation between "Years" and each of the variables that show female activity in movies (i.e."Number of words female", "Number of female actors" and "Mean Age Female"), indicating that there may be some changes in the gender balance over time.
+    \item \textbf{Has gender balance in speaking roles changed over time (i.e. years)?} None of the models considered suffered performance loss from removing the input variable 'Year'. However, the correlation in the given data set between 'Year' and all of 'Numbers of words female', 'Number of female actors' and 'Mean Age female' is positive and not trivially small (0.032, 0.134 and 0.170 respectively). We conclude that this indicates a slight change in the gender balance over time but that the model does not necessarily use this relationship to make predictions.
    
-    \item \textbf{Do films in which men do more speaking make a lot more money than films in which women speak more?}
-    %% Värt att överväga FPR/TPR här??
-    None of the models considered suffered performance loss from removing the input variable 'Gross' and the QDA model even improved a bit indicating that 'Gross' may be a bad input variable for this data because ...
+    \item \textbf{Do films in which men do more speaking make a lot more money than films in which women speak more?} None of the models considered suffered performance loss from removing the input variable 'Gross' and the QDA model even improved a bit indicating that 'Gross' may be a bad input variable for this data because ...
     % gross för män och kvinnor har ändrats olika över åren?
     
     Since none of the models seem to be effected by removing the gross variable we cannot say that gross is a good indicator for determining whether there is more male speaking than female in a given movie. That is films with more male speaking cannot be said to make more money than a film with more female speaking. 
