@@ -7,22 +7,6 @@ trainRatio = config['Train Ratio'][0]
 seed = config['Random Seed'][0]
 train, test = skl_ms.train_test_split(data, train_size=trainRatio)
 
-featureSet1 = [
-	'Year',
-	'Gross',
-	'Number of actors',
-	'Proportion of female actors',
-	'Mean Age Male',
-	'Mean Age Female',
-	'Age Lead',
-	'Age Co-Lead',
-	'Total words',
-	'Proportion of words lead',
-	'Proportion of words co-lead',
-	'Ratio words co-lead lead',
-	'Proportion of words female',
-	'Older lead'
-]
 
 features = featureSet1.copy()
 #features.remove('Proportion of words female')
