@@ -2,7 +2,7 @@
 \graphicspath{{\subfix{images/}}}
 
 \begin{document}
-	The given dataset was bootstrapped 400 times and both DA models were tested before and after input transformations.
+	The given dataset was bootstrapped 400 times and both DA models were tested before and after input transformations and dropping 'Year' and 'Gross'.
 %%	\begin{table}[h!]
 %%		\centering
 %%		\begin{tabular}{cccc}
@@ -67,9 +67,9 @@
 		\caption{Accuracy and AUC for discriminant analysis models using bootstrap. 90\% training data.}
 		\label{tab:discanal_table_90}
 	\end{table}
-	From the Tables \ref{tab:discanal_table_70} and \ref{tab:discanal_table_90} we can draw the conclusion that QDA seems to be more apt for this problem after transformations. It is unclear which method performs better before the transformation. For QDA before transformations, the variance in accuracy is high which can be explained by the fact that the original inputs are close to being colinear. This in turn makes $\Sigma$ close to being singular resulting in inaccurate matrix inversion. For example, the standard deviation of accuracy and AUC of the QDA classifier, before transformations, on 400 bootstrapped datasets with 90\% training data were 0.076 and 0.081 respectively, compared to 0.021 and 0.019 after transformations, ceteris paribus. Fortunately, the transformed inputs are not colinear.
+	From the Tables \ref{tab:discanal_table_70} and \ref{tab:discanal_table_90} we conclude that QDA seems to be more apt for this problem for the final inputs. It is unclear which method performs better for the original inputs. For QDA on the original inputs, the variance in accuracy is high which can be explained by the fact that the original inputs are close to being colinear. This in turn makes $\Sigma$ close to being singular resulting in inaccurate matrix inversion. For example, the standard deviation of accuracy and AUC of the QDA classifier, on the original inputs, with 400 bootstrapped datasets and 90\% training data were 0.076 and 0.081 respectively, compared to 0.021 and 0.019 with the final inputs, ceteris paribus. Fortunately, the final inputs are not colinear.
 	
-	Cross validation was carried out to estimate the accuracy using 150 folds resulting in an estimated accuracy of 0.948 using 70\% training data. As can be seen in figure \ref{fig:boxplotQDA}, there is a noticeable variance in accuracy for the different training sets suggesting that there might be outliers in the data that the model has problems accounting for. Increasing the number of folds also increases the minimum accuracy that can be found in the corresponding box-plot, as to be expected. Also using cross validation to compare the effects of input transformations we see a 0.090 increase in accuracy using the transformed inputs compared to the original inputs. Adding the variables 'Years' and 'Gross' back into the inputs we see a decrease in accuracy of 0.007 hence they are left out.
+	Cross validation was carried out to estimate the accuracy using 20 folds resulting in an estimated accuracy of 0.949 using 70\% training data. As can be seen in Figure \ref{fig:boxplotQDA}, there is a noticeable variance in accuracy for the different training sets suggesting that there might be outliers in the data that the model has problems accounting for. Increasing the number of folds also increases the minimum accuracy that can be found in the corresponding box-plot, as to be expected. Also using cross validation to compare the effects of input transformations we see a 0.090 increase in accuracy using the final inputs compared to the original inputs. Adding the variables 'Years' and 'Gross' back into the inputs we see a small decrease in accuracy hence they are left out.
 	\begin{figure}[h!]
 		\centering
     	\includegraphics[scale=0.7]{project/tex/QDAboxplot.png}
