@@ -7,3 +7,4 @@
 *.aux
 project/tex/*.pdf
 lab/data
+lab/.ipynb_checkpoints
