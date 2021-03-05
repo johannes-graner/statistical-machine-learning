@@ -77,11 +77,11 @@
 	\begin{figure}[ht]
 		\centering
     	\includegraphics[width=1\linewidth]{project/tex/QDAboxplot.png}
-		\caption{Accuracy estimation using cross validation with 20 folds.}
+		\caption{Accuracy estimation using cross validation with 10 folds.}
 		\label{fig:boxplotQDA}
     \end{figure}
 	
-	Cross validation was carried out to estimate the accuracy using 20 folds resulting in an estimated accuracy of 0.949 using 70\% training data. As can be seen in Figure \ref{fig:boxplotQDA}, there is a noticeable variance in accuracy for the different training sets suggesting that there might be outliers in the data that the model has problems accounting for. Increasing the number of folds also increases the minimum accuracy that can be found in the corresponding box-plot, as to be expected. Also using cross validation to compare the effects of input transformations we see a 0.090 increase in accuracy using the final inputs compared to the original inputs. Adding the variables 'Years' and 'Gross' back into the inputs we see a small decrease in accuracy hence they are left out.
+	Cross validation was carried out to estimate the accuracy using 10 folds resulting in an estimated accuracy of 0.947 using 70\% training data. As can be seen in Figure \ref{fig:boxplotQDA}, there is a noticeable variance in accuracy for the different training sets suggesting that there might be outliers in the data that the model has problems accounting for. Increasing the number of folds also increases the minimum accuracy that can be found in the corresponding box-plot, as to be expected. Also using cross validation to compare the effects of input transformations we see a 0.090 increase in accuracy using the final inputs compared to the original inputs. Adding the variables 'Years' and 'Gross' back into the inputs we see a small decrease in accuracy hence they are left out.
 
     %width=0.8\linewidth
 %%   \begin{table}[h!]
